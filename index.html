@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html> 
+    <head>
+        <title> GD TAS Archive </title>
+        <link rel="stylesheet" href="styles.css">
+        <link rel="icon" type="image/x-icon" href="/icon.png">
+        <meta charset="utf-8">
+        <script type="text/javascript" src="/filter.js"></script>
+    </head>
+    <body>
+        <div id="files">
+            <a id="ancient" href="/ybot/ancient.ybot" download></a>
+            <a id="backdrop" href="/ybot/backdrop.ybot" download></a>
+            <a id="bimba-y-lola" href="/ybot/bimba-y-lola.ybot" download></a>
+            <a id="brr" href="/ybot/brr.ybot" download></a>
+            <a id="clockwork-tower-2" href="/ybot/clockwork-tower-2.ybot" download></a>
+            <a id="clockwork-tower" href="/ybot/clockwork-tower.ybot" download></a>
+            <a id="coaster-mountain" href="/ybot/coaster-mountain.ybot" download></a>
+            <a id="disco-dungeon" href="/ybot/disco-dungeon.ybot" download></a>
+            <a id="get-the-apple" href="/ybot/get-the-apple.ybot" download></a>
+            <a id="getting-over-it" href="/ybot/getting-over-it.ybot" download></a>
+            <a id="rising-madness" href="/ybot/rising-madness.ybot" download></a>
+            <a id="shiftleaf-temple" href="/ybot/shiftleaf-temple.ybot" download></a>
+            <a id="shimmering-sierra" href="/ybot/shimmering-sierra.ybot" download></a>
+            <a id="snowy-peaks" href="/ybot/snowy-peaks.ybot" download></a>
+            <a id="spartan-tower" href="/ybot/spartan-tower.ybot" download> </a>
+            <a id="the_tower_xxii" href="/ybot/the_tower_xxii.ybot" download></a>
+            <a id="the-golden" href="/ybot/the-golden.ybot" download></a>
+            <a id="transformative-area" href="/ybot/transformative-area.ybot" download></a>
+        </div>
+        <div id="container">
+            <h1> GD TAS Archive </h1>
+            <h3> This is a collection of GD TAS runs. You can click the table headers to sort. If the row highlights when hovering over it, you can click to download the ybot macro file. </h3>
+            <input type="text" id="levelSearch" onkeyup="search(0)" placeholder="Search for levels...">
+            <table id="tasTable">
+                <thead>
+                    <tr>
+                        <th onclick="sortTable(0)">Level</th>
+                        <th onclick="sortTable(1)">TAS Time</th>
+                        <th onclick="sortTable(2)">TASer</th>
+                        <th>Notes</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="download" onclick="download('bimba-y-lola')">
+                        <td>Bimba y Lola</td>
+                        <td>13.058</td>
+                        <td>ShadowyZephyr</td>
+                    </tr>
+                    <tr class="download" onclick="download('brr')">
+                        <td>BRRRRRRRRRRRR</td>
+                        <td>13.125</td>
+                        <td>ShadowyZephyr</td>
+                    </tr>
+                    <tr class="download" onclick="download('backdrop')">
+                        <td>BACKDROP</td>
+                        <td>14.229</td>
+                        <td>ShadowyZephyr</td>
+                    </tr>
+                    <tr class="download" onclick="download('shimmering-sierra')">
+                        <td>Shimmering Sierra</td>
+                        <td>15.408</td>
+                        <td>ShadowyZephyr</td>
+                    </tr>
+                    <tr class="download" onclick="download('transformative-area')">
+                        <td>Transformative Area</td>
+                        <td>15.666</td>
+                        <td>ShadowyZephyr</td>
+                    </tr>
+                    <tr class="download" onclick="download('rising-madness')">
+                        <td>Rising Madness</td>
+                        <td>15.741</td>
+                        <td>ShadowyZephyr</td>
+                    </tr>
+                    <tr class="download" onclick="download('get-the-apple')">
+                        <td>Get The Apple</td>
+                        <td>16.679</td>
+                        <td>ShadowyZephyr</td>
+                    </tr>
+                    <tr class="download" onclick="download('getting-over-it')">
+                        <td>Getting Over It</td>
+                        <td>16.991</td>
+                        <td>ShadowyZephyr</td>
+                    </tr>
+                    <tr class="download" onclick="download('spartan-tower')">
+                        <td>Spartan Tower</td>
+                        <td>17.147</td>
+                        <td>zetex</td>
+                    </tr>
+                    <tr class="download" onclick="download('the_tower_xxii')">
+                        <td>The Tower XXII</td>
+                        <td>17.387</td>
+                        <td>watersquarez</td>
+                    </tr>
+                    <tr class="download" onclick="download('snowy-peaks')">
+                        <td>Snowy Peaks</td>
+                        <td>19.541</td>
+                        <td>ShadowyZephyr</td>
+                    </tr>
+                    <tr class="download" onclick="download('disco-dungeon')">
+                        <td>Disco Dungeon</td>
+                        <td>21.845</td>
+                        <td>ShadowyZephyr</td>
+                    </tr>
+                    <tr class="download" onclick="download('ancient')">
+                        <td>Ancient</td>
+                        <td>22.37</td>
+                        <td>ShadowyZephyr</td>
+                    </tr>
+                    <tr>
+                        <td>Joyous Whimsy</td>
+                        <td>22.962</td>
+                        <td>-</td>
+                        <td>Human WR is optimized to the frame.</td>
+                    </tr>
+                    <tr>
+                        <td>Citadel Climb</td>
+                        <td>23.87</td>
+                        <td>ezmna59</td>
+                    </tr>
+                    <tr class="download" onclick="download('shiftleaf-temple')">
+                        <td>ShiftLeaf Temple</td>
+                        <td>24.508</td>
+                        <td>ezmna59</td>
+                    </tr>
+                    <tr>
+                        <td>The Old Tower</td>
+                        <td>25.475</td>
+                        <td>ezmna59</td>
+                    </tr>
+                    <tr>
+                        <td>Chromaside</td>
+                        <td>26.129</td>
+                        <td>alex</td>
+                    </tr>
+                    <tr>
+                        <td>Ruined Acres</td>
+                        <td>29.179</td>
+                        <td>-</td>
+                        <td>Human WR is optimized to the frame.</td>
+                    </tr>
+                    <tr class="download" onclick="download('the-golden')">
+                        <td>The Golden</td>
+                        <td>36</td>
+                        <td>ShadowyZephyr</td>
+                    </tr>
+                    <tr>
+                        <td>I Wanna Be The Guy</td>
+                        <td>39.244</td>
+                        <td>alex</td>
+                    </tr>
+                    <tr>
+                        <td>Jet Lag</td>
+                        <td>45.291</td>
+                        <td>watersquarez</td>
+                    </tr>
+                    <tr>
+                        <td>Forsaken City</td>
+                        <td>65.475</td>
+                        <td>ezmna59</td>
+                    </tr>
+                    <tr class="download" onclick="download('coaster-mountain')">
+                        <td>Coaster Mountain</td>
+                        <td>108.941</td>
+                        <td>ShadowyZephyr</td>
+                    </tr>
+                    <tr>
+                        <td>Tower of Infinity</td>
+                        <td>117.55</td>
+                        <td>alex</td>
+                    </tr>
+                    <tr>
+                        <td>I Made This Level</td>
+                        <td>141.897</td>
+                        <td>alex</td>
+                    </tr>
+                    <tr>
+                        <td>Plates of Fate</td>
+                        <td>180.02</td>
+                        <td>-</td>
+                        <td>Human WR is optimized to the frame.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </body>
+</html>
