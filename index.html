@@ -6,6 +6,7 @@
         <link rel="icon" type="image/x-icon" href="/icon.png">
         <meta charset="utf-8">
         <script type="text/javascript">
+var c = false;
 function search(column) {
     var input, filter, table, tr, td, i, textValue
     input = document.getElementById("levelSearch")
@@ -74,15 +75,22 @@ function sortTable(n) {
         }
     }
 }
+function cancel() {
+    c = true;
+}   
 function download(name) {
     a = document.getElementById(name);
-    if (confirm("Download this macro?")) {
+    if (!c && confirm("Download this macro?")) {
         a.click();
     }
-}            
+    c = false;
+}         
         </script>
     </head>
     <body>
+        <div id="infotip" hidden>
+            <span>test</span>
+        </div>
         <div id="files">
             <a id="a-true-city" href="/tas-project/ybot/a-true-city.ybot" download></a>
             <a id="ancient" href="/tas-project/ybot/ancient.ybot" download></a>
@@ -145,92 +153,109 @@ function download(name) {
                         <td>BRRRRRRRRRRRR</td>
                         <td>12.037</td>
                         <td>ShadowyZephyr</td>
+                        <td></td>
                     </tr>
                     <tr class="download" onclick="download('bimba-y-lola')">
                         <td>Bimba y Lola</td>
                         <td>13.058</td>
                         <td>ShadowyZephyr</td>
+                        <td></td>
                     </tr>
                     <tr class="download" onclick="download('backdrop')">
                         <td>BACKDROP</td>
                         <td>14.229</td>
                         <td>ShadowyZephyr</td>
+                        <td></td>
                     </tr>
                     <tr class="download" onclick="download('shimmering-sierra')">
                         <td>Shimmering Sierra</td>
                         <td>15.245</td>
                         <td>watersquarez</td>
+                        <td></td>
                     </tr>
                     <tr class="download" onclick="download('transformative-area')">
                         <td>transformative area</td>
                         <td>15.666</td>
                         <td>ShadowyZephyr</td>
+                        <td></td>
                     </tr>
                     <tr class="download" onclick="download('rising-madness')">
                         <td>Rising Madness</td>
                         <td>15.741</td>
                         <td>ShadowyZephyr</td>
+                        <td></td>
                     </tr>
                     <tr class="download" onclick="download('get-the-apple')">
                         <td>Get The Apple</td>
                         <td>16.679</td>
                         <td>ShadowyZephyr</td>
+                        <td></td>
                     </tr>
                     <tr class="download" onclick="download('getting-over-it')">
                         <td>Getting Over It</td>
                         <td>16.991</td>
                         <td>ShadowyZephyr</td>
+                        <td></td>
                     </tr>
                     <tr class="download" onclick="download('spartan-tower')">
                         <td>Spartan Tower</td>
                         <td>17.147</td>
                         <td>zetex</td>
+                        <td></td>
                     </tr>
                     <tr class="download" onclick="download('the_tower_xxii')">
                         <td>The Tower XXII</td>
                         <td>17.387</td>
                         <td>watersquarez</td>
+                        <td></td>
                     </tr>
                     <tr class="download" onclick="download('snowy-peaks')">
                         <td>Snowy Peaks</td>
                         <td>19.541</td>
                         <td>ShadowyZephyr</td>
+                        <td></td>
                     </tr>
                     <tr class="download" onclick="download('disco-dungeon')">
                         <td>Disco Dungeon</td>
                         <td>21.845</td>
                         <td>ShadowyZephyr</td>
+                        <td></td>
                     </tr>
                     <tr class="download" onclick="download('ancient')">
                         <td>Ancient</td>
                         <td>22.370</td>
                         <td>ShadowyZephyr</td>
+                        <td></td>
                     </tr>
                     <tr class="download" onclick="download('infinity-trials')">
                         <td>Infinity Trials</td>
                         <td>22.412</td>
                         <td>watersquarez</td>
-                        <td><a href="https://www.youtube.com/watch?v=tC70udgfnKw">YouTube Link</a></td>
+                        <td><a onclick="cancel()" href="https://www.youtube.com/watch?v=tC70udgfnKw">YouTube Link</a></td>
                     </tr>
                     <tr class="download" onclick="download('citadel-climb')">
                         <td>Citadel Climb</td>
                         <td>23.870</td>
                         <td>ezmna59</td>
+                        <td></td>
                     </tr>
                     <tr class="download" onclick="download('shiftleaf-temple')">
                         <td>ShiftLeaf Temple</td>
                         <td>24.508</td>
                         <td>ezmna59</td>
+                        <td></td>
                     </tr>
                     <tr class="download" onclick="download('smblv1')">
                         <td>Super Mario Bros Lv1</td>
                         <td>25.145</td>
                         <td>Toster</td>
+                        <td></td>
                     </tr>
                     <tr class="download" onclick="download('the-old-tower')">
                         <td>The Old Tower</td>
                         <td>25.475</td>
                         <td>ezmna59</td>
+                        <td></td>
                     </tr>
                     <tr class="download" onclick="download('chromaside')">
                         <td>Chromaside</td>
@@ -254,6 +279,7 @@ function download(name) {
                         <td>The Golden</td>
                         <td>36.000</td>
                         <td>ShadowyZephyr</td>
+                        <td></td>
                     </tr>
                     <tr>
                         <td>I Wanna Be The Guy</td>
@@ -265,6 +291,7 @@ function download(name) {
                         <td>SpeedTek</td>
                         <td>40.938</td>
                         <td>ezmna59</td>
+                        <td></td>
                     </tr>
                     <tr>
                         <td>Jet Lag</td>
@@ -276,16 +303,19 @@ function download(name) {
                         <td>Dash Cave</td>
                         <td>54.920</td>
                         <td>ShadowyZephyr</td>
+                        <td></td>
                     </tr>
                     <tr class="download" onclick="download('loco-motive')">
                         <td>Loco Motive</td>
                         <td>60.087</td>
                         <td>ezmna59</td>
+                        <td></td>
                     </tr>
                     <tr class="download" onclick="download('forsaken-city')">
                         <td>Forsaken City</td>
                         <td>65.475</td>
                         <td>ezmna59</td>
+                        <td></td>
                     </tr>
                     <tr class="download" onclick="download('coaster-mountain')">
                         <td>Coaster Mountain</td>
