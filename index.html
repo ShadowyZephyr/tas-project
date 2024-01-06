@@ -26,10 +26,11 @@ function search(column) {
     }
 }
 function sortTable(n) {
-    var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
+    var table, rows, switching, i, x, y, shouldSwitch, headers, h, dir, switchcount = 0;
     table = document.getElementById("tasTable");
     switching = true;
     dir = "a";
+    headers = table.getElementsByTagName("TH");
     while (switching) {
         switching = false;
         rows = table.rows;
@@ -71,6 +72,20 @@ function sortTable(n) {
             if (switchcount == 0 && dir == "a") {
                 dir = "d";
                 switching = true;
+            }
+        }
+    }
+    for (i = 0; i < headers.length; i++) {
+        h = headers[i].innerHTML;
+        if (h.endsWith('▾') || h.endsWith('▴')) {
+            headers[i].innerHTML = h.substring(0, h.length - 1);
+            h = headers[i].innerHTML;
+        }
+        if (i == n) {
+            if (dir == "a") {
+                headers[i].innerHTML = h.concat('▴');
+            } else {
+                headers[i].innerHTML = h.concat('▾');
             }
         }
     }
@@ -131,7 +146,7 @@ function download(name) {
                 <thead>
                     <tr>
                         <th onclick="sortTable(0)">Level</th>
-                        <th onclick="sortTable(1)">TAS Time</th>
+                        <th onclick="sortTable(1)">TAS Time ▴</th>
                         <th onclick="sortTable(2)">TASer</th>
                         <th>Notes</th>
                     </tr>
