@@ -111,6 +111,7 @@ function download(name) {
             <a id="ancient" href="/tas-project/ybot/ancient.ybot" download></a>
             <a id="backdrop" href="/tas-project/ybot/backdrop.ybot" download></a>
             <a id="bimba-y-lola" href="/tas-project/ybot/bimba-y-lola.ybot" download></a>
+            <a id="blink-blink-blink" href="/tas-project/ybot/blink-blink-blink.ybot" download></a>
             <a id="brr" href="/tas-project/ybot/brr.ybot" download></a>
             <a id="cascade-cypts" href="/tas-project/ybot/cascade-crypts.ybot" download></a>
             <a id="chromaside" href="/tas-project/ybot/chromaside.ybot" download></a>
@@ -123,6 +124,7 @@ function download(name) {
             <a id="eternal-ending" href="/tas-project/ybot/eternal-ending.ybot" download></a>
             <a id="flipswap-factory" href="/tas-project/ybot/flipswap-factory.ybot" download></a>
             <a id="forsaken-city" href="/tas-project/ybot/forsaken-city.ybot" download></a>
+            <a id="gd-tower-tiny-square" href="/tas-project/ybot/gd-tower-tiny-square.ybot" download></a>
             <a id="get-the-apple" href="/tas-project/ybot/get-the-apple.ybot" download></a>
             <a id="getting-over-it" href="/tas-project/ybot/getting-over-it.ybot" download></a>
             <a id="infinity-trials" href="/tas-project/ybot/infinity-trials.ybot" download></a>
@@ -148,7 +150,7 @@ function download(name) {
         </div>
         <div id="container">
             <h1> Geometry Dash TAS Project </h1>
-            <h3> This is a collection of GD TAS runs. You can click the table headers to sort. If the row highlights when hovering over it, you can click to download the yBot macro file. <br> If the row is highlighted in red, the TAS/macro does not work on GD 2.201. <br><span style="color: red;"> Please DO NOT run these on the actual levels, make a copy so your time doesn't save on the leaderboard.</span> </h3>
+            <h3> This is a collection of GD TAS runs. You can click the table headers to sort. If the row highlights when hovering over it, you can click to download the yBot macro file. <br> If the row is highlighted in red, the macro file does not work on GD 2.201. <br><span style="color: red;"> Please DO NOT run these on the actual levels, make a copy so your time doesn't save on the leaderboard.</span> </h3>
             <input type="text" id="levelSearch" onkeyup="search(0)" placeholder="Search for levels...">
             <table id="tasTable">
                 <thead>
@@ -328,11 +330,11 @@ function download(name) {
                         <td>ShadowyZephyr</td>
                         <td>Thanks to Alex for creating a TAS first, I used it to help me make this one</td>
                     </tr>
-                    <tr style="background-color: #ff3333;">
+                    <tr>
                         <td>I Wanna Be The Guy</td>
                         <td>39.244</td>
                         <td>alex</td>
-                        <td> <a href="https://www.youtube.com/watch?v=GaUqU4Vf8Fg">YouTube Link</a></td>
+                        <td>Made in 2.200. <a href="https://www.youtube.com/watch?v=GaUqU4Vf8Fg">YouTube Link</a></td>
                     </tr>
                     <tr style="background-color: #ff3333;" class="download" onclick="download('speedtek')">
                         <td>SpeedTek</td>
@@ -376,6 +378,12 @@ function download(name) {
                         <td>ezmna59</td>
                         <td></td>
                     </tr>
+                    <tr class="download" onclick="download('blink-blink-blink')">
+                        <td>Blink Blink Blink</td>
+                        <td>68.025</td>
+                        <td>Toster</td>
+                        <td></td>
+                    </tr>
                     <tr class="download" onclick="download('coaster-mountain')">
                         <td>Coaster Mountain</td>
                         <td>108.387</td>
@@ -386,12 +394,18 @@ function download(name) {
                         <td>Tower of Infinity</td>
                         <td>117.55</td>
                         <td>alex</td>
-                        <td> <a href="https://www.youtube.com/watch?v=6QDSF_9Nr9A">YouTube Link</a> </td>
+                        <td>Made in 2.200. <a href="https://www.youtube.com/watch?v=6QDSF_9Nr9A">YouTube Link</a> </td>
                     </tr>
-                    <tr style="background-color: #ff3333;">
+                    <tr>
                         <td>I Made This Level</td>
                         <td>141.897</td>
                         <td>alex</td>
+                        <td>Made in 2.200. <a href="https://www.youtube.com/watch?v=0RjtZo00ELI">YouTube Link</a> </td>
+                    </tr>
+                    <tr class="download" onclick="download('gd-tower-tiny-square')">
+                        <td>GD Tower Tiny Square</td>
+                        <td>151.858</td>
+                        <td>Vibri</td>
                         <td> <a href="https://www.youtube.com/watch?v=0RjtZo00ELI">YouTube Link</a> </td>
                     </tr>
                 </tbody>
@@ -399,6 +413,6 @@ function download(name) {
             <p> Owner: ShadowyZephyr ('shadowyzephyr' on discord) </p>
             <p> Creator of yBot: kepe </p>
             <p> TAS times from: </p>
-            <p> ezmna59, zetex, watersquarez, Toster, alex, NotBelugaFan </p>
+            <p> ezmna59, zetex, watersquarez, Toster, alex, NotBelugaFan, Vibri </p>
     </body>
 </html>
