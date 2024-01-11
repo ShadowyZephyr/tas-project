@@ -151,10 +151,12 @@ function download(name) {
         </div>
         <div id="container">
             <h1> Geometry Dash TAS Project </h1>
+            <h2> Important Update: I've decided that I'm going to stop maintaining this for now, due to RobTop constantly changing the physics, trying to do this is really annoying. I'll still do TAS's if I feel like it, and add new ones, but don't expect the currently broken ones to be fixed anytime soon. I'm going to wait until we get a good few months without a physics update before I feel confident doing that. </h2>
             <h3> 
                 This is a collection of GD TAS runs. You can click the table headers to sort. If the row highlights when hovering over it, you can click to download the yBot macro file. 
-                <br> Alternatively, you can <a href="https://download-directory.github.io/?url=https%3A%2F%2Fgithub.com%2FShadowyZephyr%2Ftas-project%2Ftree%2Fmain%2Fybot">click here</a> to download all macros.
-                <br> If the row is highlighted in red, the macro file does not work on GD 2.201. <br><span style="color: red;"> Please DO NOT run these on the actual levels, make a copy so your time doesn't save on the leaderboard.</span> 
+                <br> Alternatively, you can <a href="https://download-directory.github.io/?url=https%3A%2F%2Fgithub.com%2FShadowyZephyr%2Ftas-project%2Ftree%2Fmain%2Fybot">click here</a> to download all macros. (like half of them are broken now anyway so...)
+                <br>Rows highlighted in red do not work with the latest version of GD.
+                <br><span style="color: red;"> Please DO NOT run these on the actual levels, make a copy so your time doesn't save on the leaderboard.</span> 
             </h3>
             <input type="text" id="levelSearch" onkeyup="search(0)" placeholder="Search for levels...">
             <table id="tasTable">
@@ -173,57 +175,45 @@ function download(name) {
                         <td>ShadowyZephyr</td>
                         <td>I don't really understand how the skips work, could probably go lower</td>
                     </tr>
-                    <tr class="download" onclick="download('venus')">
+                    <tr style="background-color: #ff3333;" class="download" onclick="download('venus')">
                         <td>VENUS</td>
-                        <td>10.000</td>
-                        <td>ShadowyZephyr</td>
+                        <td>10.375</td>
+                        <td>NotBelugaFan</td>
                         <td>Unrated level, ID: 97524369</td>
-                    </tr>
-                    <tr class="download" onclick="download('super-hell-trial-xvi')">
-                        <td>Super Hell Trial XVI</td>
-                        <td>11.080</td>
-                        <td>ShadowyZephyr</td>
-                        <td>Unrated level, ID: 97565853</td>
-                    </tr> 
-                    <tr class="download" onclick="download('sunken-pier')">
-                        <td>Sunken Pier</td>
-                        <td>11.250</td>
-                        <td>ShadowyZephyr</td>
-                        <td>Unrated level, ID: 97534859</td>
                     </tr>
                     <tr class="download" onclick="download('brr')">
                         <td>BRRRRRRRRRRRR</td>
-                        <td>11.979</td>
+                        <td>12.037</td>
                         <td>ShadowyZephyr</td>
                         <td></td>
                     </tr>
-                    <tr class="download" onclick="download('bimba-y-lola')">
+                    <tr style="background-color: #ff3333;" class="download" onclick="download('bimba-y-lola')">
                         <td>Bimba y Lola</td>
-                        <td>12.995</td>
+                        <td>13.058</td>
                         <td>ShadowyZephyr</td>
                         <td></td>
                     </tr>
-                    <tr class="download" onclick="download('rising-madness')">
+                    <tr style="background-color: #ff3333;" class="download" onclick="download('rising-madness')">
                         <td>Rising Madness</td>
-                        <td>15.018</td>
+                        <td>15.745</td>
                         <td>ShadowyZephyr</td>
-                        <td>The macro got corrupted somehow, and it freezes when you try to play, so you'll just have to take my word that I got this time</td>
+                        <td></td>
                     </tr>
                     <tr class="download" onclick="download('shimmering-sierra')">
                         <td>Shimmering Sierra</td>
-                        <td>15.229</td>
-                        <td>ShadowyZephyr</td>
+                        <td>15.245</td>
+                        <td>watersquarez</td>
                         <td></td>
                     </tr>
                     <tr class="download" onclick="download('transformative-area')">
                         <td>transformative area</td>
-                        <td>15.645</td>
+                        <td>15.666</td>
                         <td>ShadowyZephyr</td>
                         <td></td>
                     </tr>
-                    <tr class="download" onclick="download('get-the-apple')">
+                    <tr style="background-color: #ff3333;" class="download" onclick="download('get-the-apple')">
                         <td>Get The Apple</td>
-                        <td>16.708</td>
+                        <td>16.679</td>
                         <td>ShadowyZephyr</td>
                         <td></td>
                     </tr>
@@ -232,6 +222,12 @@ function download(name) {
                         <td>16.991</td>
                         <td>ShadowyZephyr</td>
                         <td></td>
+                    </tr>
+                    <tr class="download" onclick="download('wendys-revenge')">
+                        <td>Wendys Revenge</td>
+                        <td>17.001</td>
+                        <td>NotBelugaFan</td>
+                        <td>Unrated level, ID: 97687438</td>
                     </tr>
                     <tr style="background-color: #ff3333;" class="download" onclick="download('spartan-tower')">
                         <td>Spartan Tower</td>
@@ -245,37 +241,36 @@ function download(name) {
                         <td>watersquarez</td>
                         <td></td>
                     </tr>
-                    <tr class="download" onclick="download('wendys-revenge')">
-                        <td>Wendys Revenge</td>
-                        <td>19.402</td>
-                        <td>NotBelugaFan</td>
-                        <td>Unrated level, ID: 97687438</td>
-                    </tr>
                     <tr class="download" onclick="download('snowy-peaks')">
                         <td>Snowy Peaks</td>
-                        <td>19.570</td>
+                        <td>19.541</td>
                         <td>ShadowyZephyr</td>
                         <td></td>
                     </tr>
-                    <tr class="download" onclick="download('backdrop')">
+                    <tr style="background-color: #ff3333;" class="download" onclick="download('backdrop')">
                         <td>BACKDROP</td>
                         <td>19.779</td>
                         <td>ShadowyZephyr</td>
                         <td></td>
                     </tr>
-                    <tr class="download" onclick="download('citadel-climb')">
-                        <td>Citadel Climb</td>
-                        <td>21.170</td>
-                        <td>ShadowyZephyr, ezmna59</td>
-                        <td></td>
-                    </tr> 
-                    <tr class="download" onclick="download('ancient')">
-                        <td>Ancient</td>
-                        <td>22.441</td>
+                    <tr class="download" onclick="download('disco-dungeon')">
+                        <td>Disco Dungeon</td>
+                        <td>21.845</td>
                         <td>ShadowyZephyr</td>
                         <td></td>
                     </tr>
-                    <tr class="download" onclick="download('shiftleaf-temple')">
+                    <tr style="background-color: #ff3333;" class="download" onclick="download('ancient')">
+                        <td>Ancient</td>
+                        <td>22.370</td>
+                        <td>ShadowyZephyr</td>
+                        <td></td>
+                    </tr>
+                    <tr style="background-color: #ff3333;" class="download" onclick="download('infinity-trials')">
+                        <td>Infinity Trials</td>
+                        <td>22.412</td>
+                        <td>watersquarez</td>
+                    </tr>
+                    <tr style="background-color: #ff3333;" class="download" onclick="download('shiftleaf-temple')">
                         <td>ShiftLeaf Temple</td>
                         <td>22.825</td>
                         <td>ShadowyZephyr</td>
@@ -287,29 +282,29 @@ function download(name) {
                         <td>Toster</td>
                         <td></td>
                     </tr>
-                    <tr class="download" onclick="download('launch-factory')">
+                    <tr class="download" onclick="download('citadel-climb')">
+                        <td>Citadel Climb</td>
+                        <td>23.870</td>
+                        <td>ezmna59</td>
+                        <td></td>
+                    </tr> 
+                    <tr style="background-color: #ff3333;" class="download" onclick="download('launch-factory')">
                         <td>Launch Factory</td>
-                        <td>24.800</td>
+                        <td>24.600</td>
                         <td>ezmna59</td>
                         <td></td>
                     </tr>
-                    <tr style="background-color: #ff3333;" class="download" onclick="download('the-old-tower')">
+                    <tr class="download" onclick="download('the-old-tower')">
                         <td>The Old Tower</td>
                         <td>25.475</td>
                         <td>ezmna59</td>
                         <td></td>
                     </tr>
-                    <tr style="background-color: #ff3333;" class="download" onclick="download('eternal-ending')">
+                    <tr class="download" onclick="download('eternal-ending')">
                         <td>ETERNAL ENDING</td>
-                        <td>25.622</td>
+                        <td>25.619</td>
                         <td>NotBelugaFan</td>
-                        <td>Unrated level, ID: 98316946</td>
-                    </tr>
-                    <tr class="download" onclick="download('infinity-trials')">
-                        <td>Infinity Trials</td>
-                        <td>25.712</td>
-                        <td>wato.o</td>
-                        <td>watersquarez had a faster tas for 2.200 - <a href="https://www.youtube.com/watch?v=tC70udgfnKw">YouTube Link</a></td>
+                        <td></td>
                     </tr>
                     <tr class="download" onclick="download('chromaside')">
                         <td>Chromaside</td>
@@ -317,13 +312,13 @@ function download(name) {
                         <td>ShadowyZephyr</td>
                         <td><a onclick="cancel()" href="https://www.youtube.com/watch?v=sAum6cTWn2w">YouTube Link</a> Thanks to Alex for creating a TAS first, I used it to help me make this one</td>
                     </tr>
-                    <tr class="download" onclick="download('purrila')">
+                    <tr style="background-color: #ff3333;" class="download" onclick="download('purrila')">
                         <td>Purrila</td>
                         <td>26.191</td>
                         <td>ShadowyZephyr</td>
                         <td></td>
                     </tr>
-                    <tr class="download" onclick="download('cascade-crypts')">
+                    <tr style="background-color: #ff3333;" class="download" onclick="download('cascade-crypts')">
                         <td>Cascade Crypts</td>
                         <td>26.995</td>
                         <td>ShadowyZephyr</td>
@@ -331,13 +326,13 @@ function download(name) {
                     </tr>
                     <tr class="download" onclick="download('sink-tower')">
                         <td>Sink Tower</td>
-                        <td>28.283</td>
+                        <td>28.620</td>
                         <td>ShadowyZephyr</td>
-                        <td></td>
+                        <td>bad</td>
                     </tr>
-                    <tr class="download" onclick="download('a-true-city')">
+                    <tr style="background-color: #ff3333;" class="download" onclick="download('a-true-city')">
                         <td>A True City</td>
-                        <td>30.341</td>
+                        <td>30.208</td>
                         <td>ShadowyZephyr</td>
                         <td>Thanks to Alex for creating a TAS first, I used it to help me make this one</td>
                     </tr>
@@ -347,9 +342,9 @@ function download(name) {
                         <td>alex</td>
                         <td>Made in 2.200. <a href="https://www.youtube.com/watch?v=GaUqU4Vf8Fg">YouTube Link</a></td>
                     </tr>
-                    <tr class="download" onclick="download('speedtek')">
+                    <tr style="background-color: #ff3333;" class="download" onclick="download('speedtek')">
                         <td>SpeedTek</td>
-                        <td>41.086</td>
+                        <td>41.025</td>
                         <td>ezmna59</td>
                         <td></td>
                     </tr>
@@ -359,57 +354,57 @@ function download(name) {
                         <td>watersquarez</td>
                         <td><a href="https://www.youtube.com/watch?v=F5V4gKcKIq4">YouTube Link</a> Made in 2.200. </td>
                     </tr>
-                    <tr class="download" onclick="download('dash-cave')">
-                        <td>Dash Cave</td>
-                        <td>54.412</td>
-                        <td>ShadowyZephyr</td>
-                        <td></td>
-                    </tr>
-                    <tr class="download" onclick="download('dashing-over-it')">
+                    <tr style="background-color: #ff3333;" class="download" onclick="download('dashing-over-it')">
                         <td>Dashing Over It</td>
                         <td>54.579</td>
                         <td>ezmna59</td>
                         <td></td>
                     </tr>
-                    <tr class="download" onclick="download('loco-motive')">
+                    <tr style="background-color: #ff3333;" class="download" onclick="download('dash-cave')">
+                        <td>Dash Cave</td>
+                        <td>54.920</td>
+                        <td>ShadowyZephyr</td>
+                        <td>missing a skip</td>
+                    </tr>
+                    <tr style="background-color: #ff3333;" class="download" onclick="download('loco-motive')">
                         <td>Loco Motive</td>
-                        <td>60.016</td>
+                        <td>60.087</td>
                         <td>ezmna59</td>
                         <td></td>
                     </tr>
-                    <tr class="download" onclick="download('forsaken-city')">
+                    <tr style="background-color: #ff3333;" class="download" onclick="download('forsaken-city')">
                         <td>Forsaken City</td>
-                        <td>64.216</td>
+                        <td>65.475</td>
                         <td>ezmna59</td>
                         <td></td>
                     </tr>
-                    <tr class="download" onclick="download('tower')">
+                    <tr style="background-color: #ff3333;" class="download" onclick="download('tower')">
                         <td><b>The Tower</b></td>
                         <td>64.908</td>
                         <td>alex, ShadowyZephyr</td>
                         <td></td>
                     </tr>
-                    <tr class="download" onclick="download('flipswap-factory')">
+                    <tr style="background-color: #ff3333;" class="download" onclick="download('flipswap-factory')">
                         <td>Flipswap Factory</td>
                         <td>65.560</td>
                         <td>ezmna59</td>
                         <td></td>
                     </tr>
-                    <tr class="download" onclick="download('blink-blink-blink')">
+                    <tr style="background-color: #ff3333;" class="download" onclick="download('blink-blink-blink')">
                         <td>Blink Blink Blink</td>
                         <td>68.025</td>
                         <td>Toster</td>
                         <td></td>
                     </tr>
-                    <tr class="download" onclick="download('cellar')">
+                    <tr style="background-color: #ff3333;" class="download" onclick="download('cellar')">
                         <td><b>The Cellar</b></td>
                         <td>76.541</td>
                         <td>ShadowyZephyr</td>
                         <td></td>
                     </tr>
-                    <tr class="download" onclick="download('coaster-mountain')">
+                    <tr style="background-color: #ff3333;" class="download" onclick="download('coaster-mountain')">
                         <td>Coaster Mountain</td>
-                        <td>108.387</td>
+                        <td>108.408</td>
                         <td>ShadowyZephyr</td>
                         <td>YT video on my channel ShadowyZephyr with an earlier version of the TAS</td>
                     </tr>
@@ -425,7 +420,7 @@ function download(name) {
                         <td>alex</td>
                         <td>Made in 2.200. <a href="https://www.youtube.com/watch?v=0RjtZo00ELI">YouTube Link</a> </td>
                     </tr>
-                    <tr class="download" onclick="download('gd-tower-tiny-square')">
+                    <tr style="background-color: #ff3333;" class="download" onclick="download('gd-tower-tiny-square')">
                         <td>GD Tower Tiny Square</td>
                         <td>151.858</td>
                         <td>Vibri</td>
