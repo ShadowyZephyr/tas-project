@@ -38,7 +38,7 @@ function sortTable(n) {
             shouldSwitch = false;
             x = rows[i].getElementsByTagName("TD")[n];
             y = rows[i + 1].getElementsByTagName("TD")[n];
-            if (n == 1) {
+            if (n == 1 || n == 3) {
                 if (dir == "a") {
                     if (Number(x.innerHTML) > Number(y.innerHTML)) {
                         shouldSwitch = true;
@@ -50,7 +50,7 @@ function sortTable(n) {
                         break;
                     }
                 } 
-            } else if (n != 1) {
+            } else {
                 if (dir == "a") {
                     if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
                         shouldSwitch = true;
@@ -165,7 +165,7 @@ function download(name) {
                         <th onclick="sortTable(0)">Level</th>
                         <th onclick="sortTable(1)">TAS Time ▴</th>
                         <th onclick="sortTable(2)">TASer</th>
-                        <th>Update</th>
+                        <th onclick="sortTable(3)">Update</th>
                         <th>Notes</th>
                     </tr>
                 </thead>
