@@ -155,7 +155,7 @@ function download(name) {
             <h3> 
                 This is a collection of GD TAS runs. You can click the table headers to sort. If the row highlights when hovering over it, you can click to download the yBot macro file. 
                 <br> Alternatively, you can <a href="https://download-directory.github.io/?url=https%3A%2F%2Fgithub.com%2FShadowyZephyr%2Ftas-project%2Ftree%2Fmain%2Fybot">click here</a> to download all macros. (like half of them are broken now anyway so...)
-                <br>Rows highlighted in red do not work with the latest version of GD.
+                <br>Macros not from the latest update may be broken.
                 <br><span style="color: red;"> Please DO NOT run these on the actual levels, make a copy so your time doesn't save on the leaderboard.</span> 
             </h3>
             <input type="text" id="levelSearch" onkeyup="search(0)" placeholder="Search for levels...">
@@ -165,265 +165,295 @@ function download(name) {
                         <th onclick="sortTable(0)">Level</th>
                         <th onclick="sortTable(1)">TAS Time ▴</th>
                         <th onclick="sortTable(2)">TASer</th>
+                        <th>Update</th>
                         <th>Notes</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr class="download" onclick="download('puzzle-boxes')">
-                        <td>puzzle boxes</td>
-                        <td>2.266</td>
-                        <td>ShadowyZephyr</td>
-                        <td>Doesn't work with the latest version of the level, you'll need an old copy</td>
-                    </tr>
                     <tr class="download" onclick="download('brr')">
                         <td>BRRRRRRRRRRRR</td>
                         <td>5.679</td>
                         <td>ShadowyZephyr</td>
+                        <td>2.203</td>
                         <td></td>
                     </tr>
-                    <tr style="background-color: #ff3333;" class="download" onclick="download('venus')">
+                    <tr class="download" onclick="download('venus')">
                         <td>VENUS</td>
                         <td>10.375</td>
                         <td>NotBelugaFan</td>
+                        <td>2.2</td>
                         <td>Unrated level, ID: 97524369</td>
                     </tr>
-                    <tr style="background-color: #ff3333;" class="download" onclick="download('bimba-y-lola')">
+                    <tr class="download" onclick="download('bimba-y-lola')">
                         <td>Bimba y Lola</td>
                         <td>13.058</td>
                         <td>ShadowyZephyr</td>
+                        <td>2.2</td>
                         <td></td>
                     </tr>
                     <tr class="download" onclick="download('shimmering-sierra')">
                         <td>Shimmering Sierra</td>
                         <td>15.245</td>
                         <td>watersquarez</td>
+                        <td>2.2</td>
                         <td></td>
                     </tr>
                     <tr class="download" onclick="download('transformative-area')">
                         <td>transformative area</td>
                         <td>15.666</td>
                         <td>ShadowyZephyr</td>
+                        <td>2.2</td>
                         <td></td>
                     </tr>
                     <tr class="download" onclick="download('rising-madness')">
                         <td>Rising Madness</td>
                         <td>15.745</td>
                         <td>ShadowyZephyr</td>
+                        <td>2.2</td>
                         <td></td>
                     </tr>
-                    <tr style="background-color: #ff3333;" class="download" onclick="download('get-the-apple')">
+                    <tr class="download" onclick="download('get-the-apple')">
                         <td>Get The Apple</td>
                         <td>16.679</td>
                         <td>ShadowyZephyr</td>
+                        <td>2.2</td>
                         <td></td>
                     </tr>
                     <tr class="download" onclick="download('getting-over-it')">
                         <td>Getting Over It</td>
                         <td>16.991</td>
                         <td>ShadowyZephyr</td>
+                        <td>2.203</td>
                         <td></td>
                     </tr>
                     <tr class="download" onclick="download('wendys-revenge')">
                         <td>Wendys Revenge</td>
                         <td>17.001</td>
                         <td>NotBelugaFan</td>
+                        <td>2.204</td>
                         <td>Unrated level, ID: 97687438</td>
                     </tr>
-                    <tr style="background-color: #ff3333;" class="download" onclick="download('spartan-tower')">
+                    <tr class="download" onclick="download('spartan-tower')">
                         <td>Spartan Tower</td>
                         <td>17.147</td>
                         <td>zetex</td>
+                        <td>2.2</td>
                         <td></td>
                     </tr>
-                    <tr style="background-color: #ff3333;" class="download" onclick="download('the_tower_xxii')">
+                    <tr class="download" onclick="download('the_tower_xxii')">
                         <td>The Tower XXII</td>
                         <td>17.387</td>
                         <td>watersquarez</td>
+                        <td>2.2</td>
                         <td></td>
                     </tr>
                     <tr class="download" onclick="download('snowy-peaks')">
                         <td>Snowy Peaks</td>
                         <td>19.541</td>
                         <td>ShadowyZephyr</td>
+                        <td>2.2</td>
                         <td></td>
                     </tr>
-                    <tr style="background-color: #ff3333;" class="download" onclick="download('backdrop')">
+                    <tr class="download" onclick="download('backdrop')">
                         <td>BACKDROP</td>
                         <td>19.779</td>
                         <td>ShadowyZephyr</td>
+                        <td>2.202</td>
                         <td></td>
                     </tr>
                     <tr class="download" onclick="download('disco-dungeon')">
                         <td>Disco Dungeon</td>
                         <td>21.845</td>
                         <td>ShadowyZephyr</td>
+                        <td>2.2</td>
                         <td></td>
                     </tr>
-                    <tr style="background-color: #ff3333;" class="download" onclick="download('ancient')">
+                    <tr class="download" onclick="download('ancient')">
                         <td>Ancient</td>
                         <td>22.370</td>
                         <td>ShadowyZephyr</td>
+                        <td>2.2</td>
                         <td></td>
                     </tr>
-                    <tr style="background-color: #ff3333;" class="download" onclick="download('infinity-trials')">
+                    <tr class="download" onclick="download('infinity-trials')">
                         <td>Infinity Trials</td>
                         <td>22.412</td>
                         <td>watersquarez</td>
+                        <td>2.202</td>
+                        <td></td>
                     </tr>
-                    <tr style="background-color: #ff3333;" class="download" onclick="download('shiftleaf-temple')">
+                    <tr class="download" onclick="download('shiftleaf-temple')">
                         <td>ShiftLeaf Temple</td>
                         <td>22.825</td>
                         <td>ShadowyZephyr</td>
-                        <td></td>
-                    </tr>
-                    <tr class="download" onclick="download('smblv1')">
-                        <td>Super Mario Bros Lv1</td>
-                        <td>23.812</td>
-                        <td>Toster</td>
+                        <td>2.203</td>
                         <td></td>
                     </tr>
                     <tr class="download" onclick="download('citadel-climb')">
                         <td>Citadel Climb</td>
                         <td>23.870</td>
                         <td>ezmna59</td>
-                        <td></td>
+                        <td>2.2</td>
+                        <td>has a 21 second time for another update</td>
                     </tr> 
-                    <tr style="background-color: #ff3333;" class="download" onclick="download('launch-factory')">
+                    <tr class="download" onclick="download('launch-factory')">
                         <td>Launch Factory</td>
                         <td>24.600</td>
                         <td>ezmna59</td>
-                        <td></td>
+                        <td>2.202</td>
                     </tr>
                     <tr class="download" onclick="download('the-old-tower')">
                         <td>The Old Tower</td>
                         <td>25.475</td>
                         <td>ezmna59</td>
+                        <td>2.2</td>
                         <td></td>
                     </tr>
                     <tr class="download" onclick="download('eternal-ending')">
                         <td>ETERNAL ENDING</td>
                         <td>25.619</td>
                         <td>NotBelugaFan</td>
+                        <td>2.2</td>
                         <td></td>
                     </tr>
                     <tr class="download" onclick="download('chromaside')">
                         <td>Chromaside</td>
                         <td>25.883</td>
                         <td>ShadowyZephyr</td>
+                        <td>2.203</td>
                         <td><a onclick="cancel()" href="https://www.youtube.com/watch?v=sAum6cTWn2w">YouTube Link</a> Thanks to Alex for creating a TAS first, I used it to help me make this one</td>
                     </tr>
-                    <tr style="background-color: #ff3333;" class="download" onclick="download('purrila')">
+                    <tr class="download" onclick="download('purrila')">
                         <td>Purrila</td>
                         <td>26.191</td>
                         <td>ShadowyZephyr</td>
+                        <td>2.202</td>
                         <td></td>
                     </tr>
-                    <tr style="background-color: #ff3333;" class="download" onclick="download('cascade-crypts')">
+                    <tr class="download" onclick="download('cascade-crypts')">
                         <td>Cascade Crypts</td>
                         <td>26.995</td>
                         <td>ShadowyZephyr</td>
+                        <td>2.202</td>
                         <td></td>
                     </tr>
                     <tr class="download" onclick="download('sink-tower')">
                         <td>Sink Tower</td>
                         <td>28.620</td>
                         <td>ShadowyZephyr</td>
-                        <td>bad</td>
+                        <td>2.202</td>
+                        <td>pretty bad</td>
                     </tr>
-                    <tr style="background-color: #ff3333;" class="download" onclick="download('a-true-city')">
+                    <tr  class="download" onclick="download('a-true-city')">
                         <td>A True City</td>
                         <td>30.208</td>
                         <td>ShadowyZephyr</td>
+                        <td>2.2</td>
                         <td>Thanks to Alex for creating a TAS first, I used it to help me make this one</td>
                     </tr>
                     <tr>
                         <td>I Wanna Be The Guy</td>
                         <td>39.244</td>
                         <td>alex</td>
-                        <td>Made in 2.200. <a href="https://www.youtube.com/watch?v=GaUqU4Vf8Fg">YouTube Link</a></td>
+                        <td>2.2</td>
+                        <td><a href="https://www.youtube.com/watch?v=GaUqU4Vf8Fg">YouTube Link</a></td>
                     </tr>
-                    <tr style="background-color: #ff3333;" class="download" onclick="download('speedtek')">
+                    <tr class="download" onclick="download('speedtek')">
                         <td>SpeedTek</td>
                         <td>41.025</td>
                         <td>ezmna59</td>
+                        <td>2.2</td>
                         <td></td>
                     </tr>
                     <tr>
                         <td>Jet Lag</td>
                         <td>45.291</td>
                         <td>watersquarez</td>
+                        <td>2.2</td>
                         <td><a href="https://www.youtube.com/watch?v=F5V4gKcKIq4">YouTube Link</a> Made in 2.200. </td>
                     </tr>
-                    <tr style="background-color: #ff3333;" class="download" onclick="download('dashing-over-it')">
+                    <tr class="download" onclick="download('dashing-over-it')">
                         <td>Dashing Over It</td>
                         <td>54.579</td>
                         <td>ezmna59</td>
+                        <td>2.202</td>
                         <td></td>
                     </tr>
-                    <tr style="background-color: #ff3333;" class="download" onclick="download('dash-cave')">
+                    <tr class="download" onclick="download('dash-cave')">
                         <td>Dash Cave</td>
                         <td>54.920</td>
                         <td>ShadowyZephyr</td>
+                        <td>2.2</td>
                         <td>missing a skip</td>
                     </tr>
-                    <tr style="background-color: #ff3333;" class="download" onclick="download('loco-motive')">
+                    <tr class="download" onclick="download('loco-motive')">
                         <td>Loco Motive</td>
                         <td>60.087</td>
                         <td>ezmna59</td>
+                        <td>2.2</td>
                         <td></td>
                     </tr>
-                    <tr style="background-color: #ff3333;" class="download" onclick="download('forsaken-city')">
+                    <tr class="download" onclick="download('forsaken-city')">
                         <td>Forsaken City</td>
                         <td>65.475</td>
                         <td>ezmna59</td>
+                        <td>2.2</td>
                         <td></td>
                     </tr>
                     <tr class="download" onclick="download('tower')">
                         <td><b>The Tower</b></td>
                         <td>64.929</td>
                         <td>alex, ShadowyZephyr</td>
+                        <td>2.203</td>
                         <td></td>
                     </tr>
-                    <tr style="background-color: #ff3333;" class="download" onclick="download('flipswap-factory')">
+                    <tr  class="download" onclick="download('flipswap-factory')">
                         <td>Flipswap Factory</td>
                         <td>65.560</td>
                         <td>ezmna59</td>
+                        <td>2.202</td>
                         <td></td>
                     </tr>
-                    <tr style="background-color: #ff3333;" class="download" onclick="download('blink-blink-blink')">
+                    <tr class="download" onclick="download('blink-blink-blink')">
                         <td>Blink Blink Blink</td>
                         <td>68.025</td>
                         <td>Toster</td>
+                        <td>2.202</td>
                         <td></td>
                     </tr>
-                    <tr style="background-color: #ff3333;" class="download" onclick="download('cellar')">
+                    <tr class="download" onclick="download('cellar')">
                         <td><b>The Cellar</b></td>
                         <td>76.541</td>
                         <td>ShadowyZephyr</td>
+                        <td>2.202</td>
                         <td></td>
                     </tr>
-                    <tr style="background-color: #ff3333;" class="download" onclick="download('coaster-mountain')">
+                    <tr class="download" onclick="download('coaster-mountain')">
                         <td>Coaster Mountain</td>
                         <td>108.408</td>
                         <td>ShadowyZephyr</td>
+                        <td>2.202</td>
                         <td>YT video on my channel ShadowyZephyr with an earlier version of the TAS</td>
                     </tr>
                     <tr>
                         <td>Tower of Infinity</td>
                         <td>117.55</td>
                         <td>alex</td>
-                        <td>Made in 2.200. <a href="https://www.youtube.com/watch?v=6QDSF_9Nr9A">YouTube Link</a> </td>
+                        <td>2.2</td>
+                        <td><a href="https://www.youtube.com/watch?v=6QDSF_9Nr9A">YouTube Link</a> </td>
                     </tr>
                     <tr>
                         <td>I Made This Level</td>
                         <td>141.897</td>
                         <td>alex</td>
-                        <td>Made in 2.200. <a href="https://www.youtube.com/watch?v=0RjtZo00ELI">YouTube Link</a> </td>
+                        <td>2.2</td>
+                        <td> <a href="https://www.youtube.com/watch?v=0RjtZo00ELI">YouTube Link</a> </td>
                     </tr>
-                    <tr style="background-color: #ff3333;" class="download" onclick="download('gd-tower-tiny-square')">
+                    <tr class="download" onclick="download('gd-tower-tiny-square')">
                         <td>GD Tower Tiny Square</td>
                         <td>151.858</td>
                         <td>Vibri</td>
+                        <td>2.202</td>
                         <td></td>
                     </tr>
                 </tbody>
