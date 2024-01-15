@@ -2,7 +2,6 @@
  -------------
 
  Optimize: 
- ShiftLeaf Temple
  Ancient
  Rising Madness
  Dash Cave (coyote skip)
