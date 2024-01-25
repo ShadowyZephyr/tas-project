@@ -5,107 +5,10 @@
         <link rel="stylesheet" href="styles.css">
         <link rel="icon" type="image/x-icon" href="/icon.png">
         <meta charset="utf-8">
-        <script type="text/javascript">
-var c = false;
-function search(column) {
-    var input, filter, table, tr, td, i, textValue
-    input = document.getElementById("levelSearch")
-    filter = input.value.toUpperCase();
-    table = document.getElementById("tasTable")
-    tr = table.getElementsByTagName("tr");
-    for (i = 0; i < tr.length; i++) {
-      td = tr[i].getElementsByTagName("td")[column];
-      if (td) {
-        txtValue = td.textContent || td.innerText;
-        if (txtValue.toUpperCase().indexOf(filter) > -1) {
-          tr[i].style.display = "";
-        } else {
-          tr[i].style.display = "none";
-        }
-      }
-    }
-}
-function sortTable(n) {
-    var table, rows, switching, i, x, y, shouldSwitch, headers, h, dir, switchcount = 0;
-    table = document.getElementById("tasTable");
-    switching = true;
-    dir = "a";
-    headers = table.getElementsByTagName("TH");
-    while (switching) {
-        switching = false;
-        rows = table.rows;
-        for (i = 1; i < (rows.length - 1); i++) {
-            shouldSwitch = false;
-            x = rows[i].getElementsByTagName("TD")[n];
-            y = rows[i + 1].getElementsByTagName("TD")[n];
-            if (n == 1 || n == 3) {
-                if (dir == "a") {
-                    if (Number(x.innerHTML) > Number(y.innerHTML)) {
-                        shouldSwitch = true;
-                        break;
-                    } 
-                } else if (dir == "d") {
-                    if (Number(x.innerHTML) < Number(y.innerHTML)) {
-                        shouldSwitch = true;
-                        break;
-                    }
-                } 
-            } else {
-                if (dir == "a") {
-                    if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
-                        shouldSwitch = true;
-                        break;
-                    }
-                } else if (dir == "d") {
-                    if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase()) {
-                        shouldSwitch = true;
-                        break;
-                    }
-                }
-            }
-        }
-        if (shouldSwitch) {
-            rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
-            switching = true;
-            switchcount ++;
-        } else {
-            if (switchcount == 0 && dir == "a") {
-                dir = "d";
-                switching = true;
-            }
-        }
-    }
-    for (i = 0; i < headers.length; i++) {
-        h = headers[i].innerHTML;
-        if (h.endsWith('▾') || h.endsWith('▴')) {
-            headers[i].innerHTML = h.substring(0, h.length - 1);
-            h = headers[i].innerHTML;
-        }
-        if (i == n) {
-            if (dir == "a") {
-                headers[i].innerHTML = h.concat('▴');
-            } else {
-                headers[i].innerHTML = h.concat('▾');
-            }
-        }
-    }
-}
-function cancel() {
-    c = true;
-}   
-function download(name) {
-    a = document.getElementById(name);
-    if (!c && confirm("Download this macro?")) {
-        a.click();
-    }
-    c = false;
-}         
-        </script>
+        <script type="text/javascript" src="/tas-project/app.js"></script>
+        <script type="text/javascript" src="/app.js"></script>
     </head>
     <body>
-        <div id="infotip" hidden>
-            <span>test</span>
-        </div>
         <div id="files">
             <a id="a-true-city" href="/tas-project/ybot/a-true-city.ybot" download></a>
             <a id="ancient" href="/tas-project/ybot/ancient.ybot" download></a>
@@ -118,6 +21,7 @@ function download(name) {
             <a id="chromaside" href="/tas-project/ybot/chromaside.ybot" download></a>
             <a id="citadel-climb" href="/tas-project/ybot/citadel-climb.ybot" download></a>
             <a id="coaster-mountain" href="/tas-project/ybot/coaster-mountain.ybot" download></a>
+            <a id="cobblestone-crypts" href="/tas-project/ybot/cobblestone-crypts.ybot" download></a>
             <a id="dash-cave" href="/tas-project/ybot/dash-cave.ybot" download></a>
             <a id="dashing-over-it" href="/tas-project/ybot/dashing-over-it.ybot" download></a>
             <a id="disco-dungeon" href="/tas-project/ybot/disco-dungeon.ybot" download></a>
@@ -133,6 +37,7 @@ function download(name) {
             <a id="purrila" href="/tas-project/ybot/purrila.ybot" download></a>
             <a id="puzzle-boxes" href="/tas-project/ybot/puzzle-boxes.ybot" download></a>
             <a id="rising-madness" href="/tas-project/ybot/rising-madness.ybot" download></a>
+            <a id="sewers" href="/tas-project/ybot/sewers.ybot" download></a>
             <a id="shiftleaf-temple" href="/tas-project/ybot/shiftleaf-temple.ybot" download></a>
             <a id="shimmering-sierra" href="/tas-project/ybot/shimmering-sierra.ybot" download></a>
             <a id="sink-tower" href="/tas-project/ybot/sink-tower.ybot" download></a>
@@ -360,6 +265,13 @@ function download(name) {
                         <td>2.2</td>
                         <td>Thanks to Alex for creating a TAS first, I used it to help me make this one</td>
                     </tr>
+                    <tr class="download" onclick="download('cobblestone-crypts')">
+                        <td>Cobblestone Crypts</td>
+                        <td>32.391</td>
+                        <td>ShadowyZephyr</td>
+                        <td>2.204</td>
+                        <td></td>
+                    </tr>
                     <tr>
                         <td>I Wanna Be The Guy</td>
                         <td>38.972</td>
@@ -418,12 +330,12 @@ function download(name) {
                     </tr>
                     <tr class="download" onclick="download('tower')">
                         <td><b>The Tower</b></td>
-                        <td>64.929</td>
-                        <td>alex, ShadowyZephyr</td>
-                        <td>2.203</td>
+                        <td>64.904</td>
+                        <td>ShadowyZephyr</td>
+                        <td>2.204</td>
                         <td></td>
                     </tr>
-                    <tr  class="download" onclick="download('flipswap-factory')">
+                    <tr class="download" onclick="download('flipswap-factory')">
                         <td>Flipswap Factory</td>
                         <td>65.560</td>
                         <td>ezmna59</td>
@@ -437,11 +349,18 @@ function download(name) {
                         <td>2.202</td>
                         <td></td>
                     </tr>
+                    <tr class="download" onclick="download('sewers')">
+                        <td><b>The Sewers</b></td>
+                        <td>72.287</td>
+                        <td>ShadowyZephyr</td>
+                        <td>2.204</td>
+                        <td></td>
+                    </tr>
                     <tr class="download" onclick="download('cellar')">
                         <td><b>The Cellar</b></td>
-                        <td>76.541</td>
+                        <td>76.429</td>
                         <td>ShadowyZephyr</td>
-                        <td>2.202</td>
+                        <td>2.204</td>
                         <td></td>
                     </tr>
                     <tr class="download" onclick="download('coaster-mountain')">
@@ -478,7 +397,7 @@ function download(name) {
                         <td>sear</td>
                         <td>2.204</td>
                         <td><a onclick="cancel()" href="https://www.youtube.com/watch?v=yUqTrtyMBQI">YouTube Link</a></td>
-                    </tr>
+                    </tr>   
                 </tbody>
             </table>
             <p> Owner: ShadowyZephyr ('shadowyzephyr' on discord) </p>
