@@ -86,7 +86,9 @@ function cancel() {
     c = true;
 }   
 function download(name) {
-    a = document.getElementById(name);
+    let a = document.getElementById('downloader');
+    let path = '/tas-project/ybot/' + name + '.ybot';
+    a.setAttribute('href', path);
     if (!c && confirm("Download this macro?")) {
         a.click();
     }
