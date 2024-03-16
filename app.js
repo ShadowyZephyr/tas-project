@@ -140,13 +140,13 @@ function display(items) {
 function next() {
     if (page < currentMacros.length/rowsPerPage) {
         page += 1;
-        display(currentMacros);
+        rateFilter();
     }
 }
 function previous() {
     if(page > 1) {
         page -= 1;
-        display(currentMacros);
+        rateFilter();
     }
 }
 function search() {
