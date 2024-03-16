@@ -135,7 +135,7 @@ function display(items) {
         document.getElementById('tasTableBody').appendChild(tr);     
     }
     const counter = document.getElementById('counter');
-    counter.innerText = 'Page ' + page + ' (showing ' + (start+1) + '-' + Math.min(end+1,items.length) + ' of ' + items.length;
+    counter.innerText = 'Page ' + page + ' (showing ' + (start+1) + '-' + Math.min(end+1,items.length) + ' of ' + items.length + ')';
 }
 function next() {
     if (page < currentMacros.length/rowsPerPage) {
