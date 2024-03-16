@@ -103,6 +103,7 @@ function rateFilter() {
 function download(name, folder, filetype) {
     let a = document.getElementById('downloader');
     let path = '/tas-project/' + folder + '/' + name + filetype;
+    console.log(path);
     a.setAttribute('href', path);
     if (confirm("Download this macro?")) {
         a.click();

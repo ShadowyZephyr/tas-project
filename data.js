@@ -906,7 +906,7 @@ var fullMacroData = {
             "desc": false
         },
         {
-            "id": "tower-100%",
+            "id": "tower-100",
             "name": "The Tower (100%)",
             "creator": "RobTop",
             "levelid": "5001",
