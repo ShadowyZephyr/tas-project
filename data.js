@@ -659,13 +659,13 @@ var fullMacroData = {
             "rating": 1,
             "difficulty": 13,
             "bot": ["ybot"],
-            "time": 38.972,
+            "time": 38.625,
             "tps": 240,
             "contributor": "sear",
             "version": 2.204,
-            "video": "https://www.youtube.com/embed/WSo7Jqe3uQQ",
+            "video": "https://www.youtube.com/embed/KbG2zHc2P30",
             "download": true,
-            "desc": "Macro broken, press left on frame 0 to align"
+            "desc": false
         },
         {
             "id": "jet-lag",
