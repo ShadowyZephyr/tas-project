@@ -3,5 +3,10 @@
 
  Optimize: 
  Ancient
- Rising Madness
  Dash Cave (coyote skip)
+
+ Redo:
+ 1. Rising Madness
+ 2. Sink Tower
+ 3. SpeedTek
+ then fix other 2.2 tas

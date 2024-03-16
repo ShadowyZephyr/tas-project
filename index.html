@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html> 
     <head>
-        <title> GD TAS Archive </title>
+        <title> GD TAS Hub </title>
         <link rel="stylesheet" href="styles.css">
         <link rel="icon" type="image/x-icon" href="/icon.png">
         <meta charset="utf-8">
+        <script type="text/javascript" src="/tas-project/data.js"></script>
+        <script type="text/javascript" src="/data.js"></script>
         <script type="text/javascript" src="/tas-project/app.js"></script>
         <script type="text/javascript" src="/app.js"></script>
     </head>
@@ -12,514 +14,116 @@
         <div>
             <a id="downloader" href="" download></a>
         </div>
+        <div id="sidenav-left">
+            <h2>Show Levels By Rating</h2>
+            <input type="checkbox" onclick="rateFilter()" id="f-1" class="rateFilter" checked>
+            <label for="f-1">RobTop</label> <br>
+            <input type="checkbox" onclick="rateFilter()" id="f0" class="rateFilter" checked>
+            <label for="f0">Unrated</label> <br>
+            <input type="checkbox" onclick="rateFilter()" id="f1" class="rateFilter" checked>
+            <label for="f1">Starred</label> <br>
+            <input type="checkbox" onclick="rateFilter()" id="f2" class="rateFilter" checked>
+            <label for="f2">Featured</label> <br>
+            <input type="checkbox" onclick="rateFilter()" id="f3" class="rateFilter" checked>
+            <label for="f3">Epic</label> <br>
+            <input type="checkbox" onclick="rateFilter()" id="f4" class="rateFilter" checked>
+            <label for="f4">Legendary</label> <br>
+            <input type="checkbox" onclick="rateFilter()" id="f5" class="rateFilter" checked>
+            <label for="f5">Mythic</label> <br>
+        </div>
         <div id="container">
-            <h1> Geometry Dash TAS Project </h1>
+            <h1> Geometry Dash TAS Hub </h1>
             <h3> 
-                This is a collection of GD TAS runs. You can click the table headers to sort. If the row highlights when hovering over it, you can click to download the yBot macro file. 
-                <br> Alternatively, you can <a href="https://download-directory.github.io/?url=https%3A%2F%2Fgithub.com%2FShadowyZephyr%2Ftas-project%2Ftree%2Fmain%2Fybot">click here</a> to download all macros. (like half of them are broken now anyway so...)
-                <br>Macros not from the latest update may be broken.
+                This is a collection of GD TAS runs. You can click the table headers to sort. Click on macro to get more information.
+                <br>Macros not from the latest update are probably broken, but kept here for history.
                 <br><span style="color: red;"> Please DO NOT run these on the actual levels, make a copy so your time doesn't save on the leaderboard.</span>
                 <br>If you want me to TAS a level, either DM me on discord (shadowyzephyr) or request one <a href="https://forms.gle/HiPe7E8rYauGc5Ff7">here</a>.
             </h3>
-            <input type="text" id="levelSearch" onkeyup="search(0)" placeholder="Search for levels...">
-            <table id="tasTable">
-                <thead>
+            <div id="inner">
+                <input type="text" id="levelSearch" onkeyup="search('name')" placeholder="Search here...">
+                <br>
+                <div style="width: 100%; height: 50px;">
+                    <button class="page" id="previous"><</button>
+                    <span style="width: 50%;" id="counter">Page 1 (showing 1-10 of total)</span>
+                    <button class="page" id="next">></button>
+                </div>
+                <table id="tasTable">
+                    <thead>
+                        <tr>
+                            <th onclick="sortMacros(0)">Level</th>
+                            <th onclick="sortMacros(1)">TAS Time ▴</th>
+                            <th onclick="sortMacros(2)">TASer</th>
+                            <th onclick="sortMacros(3)">Difficulty</th>
+                            <th onclick="sortMacros(4)">Update</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tasTableBody">    
+                    </tbody>
+                </table>
+                <p> Owner: ShadowyZephyr ('shadowyzephyr' on discord) </p>
+                <p> Bot Creators: </p>
+                <ul>
+                    <li>kepe - yBot </li>
+                    <li>Absolllute - Mega Hack Replay</li>
+                    <li>Zilko - xdBot</li>
+                </ul>
+                <p> TAS Contributors: </p>
+                <p> ezmna59, zetex, watersquarez, Toster, alex, NotBelugaFan, Vinsterplayz Vibri, sear, C00L, Fuyu, dudodo </p>
+            </div>
+            <div class="hidden" id="infobox">
+                <button id="x">X</button>
+                <h2 id="level"></h2>
+                <iframe id="video"></iframe>
+                <table id="infoTable">
                     <tr>
-                        <th onclick="sortTable(0)">Level</th>
-                        <th onclick="sortTable(1)">TAS Time ▴</th>
-                        <th onclick="sortTable(2)">TASer</th>
-                        <th onclick="sortTable(3)">Update</th>
-                        <th>Notes</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr class="download" onclick="download('brr')">
-                        <td>BRRRRRRRRRRRR</td>
-                        <td>5.620</td>
-                        <td>Fuyu</td>
-                        <td>2.204</td>
-                        <td></td>
-                    </tr>
-                    <tr class="download" onclick="download('permafrost-peaks')">
-                        <td>Permafrost Peaks</td>
-                        <td>8.179</td>
-                        <td>ShadowyZephyr</td>
-                        <td>2.204</td>
-                        <td>Macro broken, press left before it starts to align. Unrated level, ID: 98852405 <a href="https://www.youtube.com/watch?v=-GwMwRCvca8" onclick="cancel()">YouTube Link</a></td>
-                    </tr>
-                    <tr class="download" onclick="download('yiik-a-postalbertrpg')">
-                        <td>YiiK A PostAlbertRPG</td>
-                        <td>9.283</td>
-                        <td>sear</td>
-                        <td>2.204</td>
-                        <td>Unrated level, ID: 100353881</td>
-                    </tr>
-                    <tr class="download" onclick="download('venus')">
-                        <td>VENUS</td>
-                        <td>9.562</td>
-                        <td>Fuyu</td>
-                        <td>2.204</td>
-                        <td>Unrated level, ID: 97524369. <a onclick="cancel()" href="https://www.youtube.com/watch?v=VALsq5kBlKA">YouTube Link</a></td>
-                    </tr>
-                    <tr>
-                        <td>Sunken Pier</td>
-                        <td>9.900</td>
-                        <td>Fuyu</td>
-                        <td>2.204</td>
-                        <td>Unrated level, ID: 97534859, <a href="https://www.youtube.com/watch?v=i3qL9yFt1q0">Old YouTube Link (9.904)</a> </td>
-                    </tr>
-                    <tr class="download" onclick="download('bimba-y-lola')">
-                        <td>Bimba y Lola</td>
-                        <td>13.058</td>
-                        <td>ShadowyZephyr</td>
-                        <td>2.2</td>
-                        <td></td>
-                    </tr>
-                    <tr class="download" onclick="download('wendys-revenge')">
-                        <td>Wendys Revenge</td>
-                        <td>13.795</td>
-                        <td>Fuyu</td>
-                        <td>2.204</td>
-                        <td>Unrated level, ID: 97687438, <a href="https://www.youtube.com/watch?v=bn-e4bj12-0" onclick="cancel()">YouTube Link</a></td>
+                        <td>Game Version:</td>
+                        <td id="version"></td>
                     </tr>
                     <tr>
-                        <td>Tetris In GD</td>
-                        <td>13.979</td>
-                        <td>ShadowyZephyr</td>
-                        <td>2.204</td>
-                        <td><a href="https://www.youtube.com/watch?v=iXbfgD9iXHw" onclick="cancel()">YouTube Link</a></td>
-                    </tr>
-                    <tr class="download" onclick="download('candy-crush-buff')">
-                        <td>Candy Crush buff</td>
-                        <td>14.529</td>
-                        <td>ShadowyZephyr</td>
-                        <td>2.204</td>
-                        <td>Unrated level, ID: 98714164, <a href="https://www.youtube.com/watch?v=qQbuAFyYp6U" onclick="cancel()">YouTube Link</a></td>
+                        <td>Level Type:</td>
+                        <td id="mode"></td>
                     </tr>
                     <tr>
-                        <td>Ruined</td>
-                        <td>14.412</td>
-                        <td>ShadowyZephyr</td>
-                        <td>2.204</td>
-                        <td>Macro bug, press left before it starts to align. Unrated level, ID: 99303885, <a href="https://www.youtube.com/watch?v=Qph12gXkUx0" onclick="cancel()">YouTube Link</a></td>
-                    </tr>
-                    <tr class="download" onclick="download('shimmering-sierra')">
-                        <td>Shimmering Sierra</td>
-                        <td>15.275</td>
-                        <td>ShadowyZephyr</td>
-                        <td>2.204</td>
-                        <td></td>
-                    </tr>
-                    <tr class="download" onclick="download('scarlet-basement')">
-                        <td>Scarlet Basement</td>
-                        <td>15.466</td>
-                        <td>Fuyu</td>
-                        <td>2.204</td>
-                        <td>Unrated level, ID: 97543818, <a href="https://www.youtube.com/watch?v=VhwNPuxVYLo" onclick="cancel()">YouTube Link</a></td>
-                    </tr>
-                    <tr class="download" onclick="download('transformative-area')">
-                        <td>transformative area</td>
-                        <td>15.679</td>
-                        <td>ShadowyZephyr</td>
-                        <td>2.204</td>
-                        <td></td>
-                    </tr>
-                    <tr class="download" onclick="download('rising-madness')">
-                        <td>Rising Madness</td>
-                        <td>15.745</td>
-                        <td>ShadowyZephyr</td>
-                        <td>2.2</td>
-                        <td>really bad, will optimize later</td>
-                    </tr>
-                    <tr class="download" onclick="download('get-the-apple')">
-                        <td>Get The Apple</td>
-                        <td>16.458</td>
-                        <td>ShadowyZephyr</td>
-                        <td>2.204</td>
-                        <td></td>
-                    </tr>
-                    <tr class="download" onclick="download('the-tower-xxii')">
-                        <td>The Tower XXII</td>
-                        <td>16.791</td>
-                        <td>Fuyu</td>
-                        <td>2.204</td>
-                        <td><a href="https://www.youtube.com/watch?v=4ueckMdobT8" onclick="cancel()">YouTube Link</a></td>
-                    </tr>
-                    <tr class="download" onclick="download('getting-over-it')">
-                        <td>Getting Over It</td>
-                        <td>16.991</td>
-                        <td>ShadowyZephyr</td>
-                        <td>2.203</td>
-                        <td></td>
-                    </tr>
-                    <tr class="download" onclick="download('spartan-tower')">
-                        <td>Spartan Tower</td>
-                        <td>17.147</td>
-                        <td>zetex</td>
-                        <td>2.2</td>
-                        <td></td>
-                    </tr>
-                    <tr class="download" onclick="download('snowy-peaks')">
-                        <td>Snowy Peaks</td>
-                        <td>19.541</td>
-                        <td>ShadowyZephyr</td>
-                        <td>2.2</td>
-                        <td></td>
-                    </tr>
-                    <tr class="download" onclick="download('backdrop')">
-                        <td>BACKDROP</td>
-                        <td>19.779</td>
-                        <td>ShadowyZephyr</td>
-                        <td>2.202</td>
-                        <td></td>
+                        <td>Level Rating:</td>
+                        <td id="rating"></td>
                     </tr>
                     <tr>
-                        <td>ETERNAL ENDING</td>
-                        <td>20.675</td>
-                        <td>Fuyu</td>
-                        <td>2.204</td>
-                        <td><a href="https://www.youtube.com/watch?v=zQn3oTlEHgw" onclick="cancel()">YouTube Link</a></td>
-                    </tr>
-                    <tr class="download" onclick="download('citadel-climb')">
-                        <td>Citadel Climb</td>
-                        <td>20.679</td>
-                        <td>ShadowyZephyr</td>
-                        <td>2.204</td>
-                        <td></td>
-                    </tr>
-                    <tr class="download" onclick="download('ftrial')">
-                        <td>ftrial</td>
-                        <td>21.270</td>
-                        <td>Fuyu</td>
-                        <td>2.204</td>
-                        <td>Unrated level, ID: 97570694, <a href="https://www.youtube.com/watch?v=f3gmwzK-Qdc" onclick="cancel()">YouTube Link</a></td>
-                    </tr> 
-                    <tr class="download" onclick="download('disco-dungeon')">
-                        <td>Disco Dungeon</td>
-                        <td>21.845</td>
-                        <td>ShadowyZephyr</td>
-                        <td>2.2</td>
-                        <td></td>
-                    </tr>
-                    <tr class="download" onclick="download('ancient')">
-                        <td>Ancient</td>
-                        <td>22.370</td>
-                        <td>ShadowyZephyr</td>
-                        <td>2.2</td>
-                        <td></td>
-                    </tr>
-                    <tr class="download" onclick="download('infinity-trials')">
-                        <td>Infinity Trials</td>
-                        <td>22.237</td>
-                        <td>Fuyu</td>
-                        <td>2.204</td>
-                        <td><a href="https://www.youtube.com/watch?v=t4FykSVvLds" onclick="cancel()">YouTube Link</a></td>
-                    </tr>
-                    <tr class="download" onclick="download('smelvin-teahouse')">
-                        <td>Smelvin Teahouse</td>
-                        <td>22.625</td>
-                        <td>Fuyu</td>
-                        <td>2.204</td>
-                        <td>Unrated level, ID: 97949737, <a href="https://www.youtube.com/watch?v=wgvtANMTC6w" onclick="cancel()">YouTube Link</a></td>
+                        <td>Level Difficulty:</td>   
+                        <td id="difficulty"></td>
                     </tr>
                     <tr>
-                        <td>Super Mario Bros Lv1</td>
-                        <td>22.650</td>
-                        <td>C00L</td>
-                        <td>2.202</td>
-                        <td><a href="https://www.youtube.com/watch?v=mwpsSyQu9oY" onclick="cancel()">YouTube Link</a></td>
-                    </tr>
-                    <tr class="download" onclick="download('shiftleaf-temple')">
-                        <td>ShiftLeaf Temple</td>
-                        <td>22.825</td>
-                        <td>ShadowyZephyr</td>
-                        <td>2.203</td>
-                        <td></td>
-                    </tr>
-                    <tr class="download" onclick="download('launch-factory')">
-                        <td>Launch Factory</td>
-                        <td>24.600</td>
-                        <td>ezmna59</td>
-                        <td>2.202</td>
-                    </tr>
-                    <tr class="download" onclick="download('the-old-tower')">
-                        <td>The Old Tower</td>
-                        <td>25.475</td>
-                        <td>ezmna59</td>
-                        <td>2.2</td>
-                        <td></td>
-                    </tr>
-                    <tr class="download" onclick="download('chromaside')">
-                        <td>Chromaside</td>
-                        <td>25.883</td>
-                        <td>ShadowyZephyr</td>
-                        <td>2.204</td>
-                        <td><a onclick="cancel()" href="https://www.youtube.com/watch?v=sAum6cTWn2w" onclick="cancel()">YouTube Link</a> Thanks to Alex for creating a TAS first, I used it to help me make this one</td>
-                    </tr>
-                    <tr class="download" onclick="download('purrila')">
-                        <td>Purrila</td>
-                        <td>26.191</td>
-                        <td>ShadowyZephyr</td>
-                        <td>2.202</td>
-                        <td></td>
-                    </tr>
-                    <tr class="download" onclick="download('cascade-crypts')">
-                        <td>Cascade Crypts</td>
-                        <td>26.995</td>
-                        <td>ShadowyZephyr</td>
-                        <td>2.202</td>
-                        <td></td>
-                    </tr>
-                    <tr class="download" onclick="download('squid-game-font')">
-                        <td>Squid game font</td>
-                        <td>28.379</td>
-                        <td>ShadowyZephyr</td>
-                        <td>2.204</td>
-                        <td></td>
-                    </tr>
-                    <tr class="download" onclick="download('sink-tower')">
-                        <td>Sink Tower</td>
-                        <td>28.620</td>
-                        <td>ShadowyZephyr</td>
-                        <td>2.202</td>
-                        <td>pretty bad</td>
-                    </tr>
-                    <tr class="download" onclick="download('a-true-city')">
-                        <td>A True City</td>
-                        <td>29.854</td>
-                        <td>ShadowyZephyr</td>
-                        <td>2.204</td>
-                        <td>Thanks to Alex for creating a TAS first, I used it to help me make this one. 30.1x probably possible</td>
-                    </tr>
-                    <tr class="download" onclick="download('cobblestone-crypts')">
-                        <td>Cobblestone Crypts</td>
-                        <td>32.391</td>
-                        <td>ShadowyZephyr</td>
-                        <td>2.204</td>
-                        <td></td>
-                    </tr>
-                    <tr class="download" onclick="download('a-christmas-delivery')">
-                        <td>A Christmas Delivery</td>
-                        <td>37.220</td>
-                        <td>ShadowyZephyr</td>
-                        <td>2.204</td>
-                        <td><a href="https://www.youtube.com/watch?v=EAADEDbYG5I" onclick="cancel()">YouTube Link</a></td>
-                    </tr>
-                    <tr class="download" onclick="download('i-wanna-be-the-guy')">
-                        <td>I Wanna Be The Guy</td>
-                        <td>38.972</td>
-                        <td>sear</td>
-                        <td>2.204</td>
-                        <td>Macro is misaligned, press left before it starts. <a href="https://www.youtube.com/watch?v=WSo7Jqe3uQQ" onclick="cancel()">YouTube Link</a></td>
-                    </tr>
-                    <tr class="download" onclick="download('speedtek')">
-                        <td>SpeedTek</td>
-                        <td>41.025</td>
-                        <td>ezmna59</td>
-                        <td>2.2</td>
-                        <td></td>
-                    </tr>
-                    <tr class="download" onclick="download('jet-lag')">
-                        <td>Jet Lag</td>
-                        <td>43.450</td>
-                        <td>Fuyu</td>
-                        <td>2.204</td>
-                        <td><a href="https://www.youtube.com/watch?v=O07leRTPjLI" onclick="cancel()">YouTube Link</a> </td>
-                    </tr>
-                    <tr class="download" onclick="download('sunset-summit')">
-                        <td>Sunset Summit</td>
-                        <td>44.336</td>
-                        <td>sear</td>
-                        <td>2.204</td>
-                        <td>Unrated level, ID: 98094285</td>
-                    </tr>
-                    <tr class="download" onclick="download('impossible-boy')">
-                        <td>Impossible Boy</td>
-                        <td>48.587</td>
-                        <td>ShadowyZephyr</td>
-                        <td>2.204</td>
-                        <td>Unrated level, ID: 98011217, <a onclick="cancel()" href="https://www.youtube.com/watch?v=6S8jzN_2vGA">YouTube Link</a></td>
-                    </tr>
-                    <tr class="download" onclick="download('dashing-over-it')">
-                        <td>Dashing Over It</td>
-                        <td>54.579</td>
-                        <td>ezmna59</td>
-                        <td>2.202</td>
-                        <td></td>
-                    </tr>
-                    <tr class="download" onclick="download('dash-cave')">
-                        <td>Dash Cave</td>
-                        <td>54.920</td>
-                        <td>ShadowyZephyr</td>
-                        <td>2.2</td>
-                        <td>missing a skip</td>
-                    </tr>
-                    <tr class="download" onclick="download('bramble-scramble')">
-                        <td>Bramble Scramble</td>
-                        <td>58.175</td>
-                        <td>Fuyu</td>
-                        <td>2.204</td>
-                        <td>Unrated level, ID: 99126990, <a href="https://www.youtube.com/watch?v=VtNjZuADcDk" onclick="cancel()">YouTube Link</a></td>
-                    </tr>
-                    <tr class="download" onclick="download('forsaken-city')">
-                        <td>Forsaken City</td>
-                        <td>58.716</td>
-                        <td>ShadowyZephyr</td>
-                        <td>2.204</td>
-                        <td><a href="https://www.youtube.com/watch?v=yFoqweo2exo" onclick="cancel()">YouTube Link</a></td>
-                    </tr>
-                    <tr class="download" onclick="download('flipswap-factory')">
-                        <td>Flipswap Factory</td>
-                        <td>59.975</td>
-                        <td>ShadowyZephyr</td>
-                        <td>2.204</td>
-                        <td><a onclick="cancel()" href="https://www.youtube.com/watch?v=V2ewGtogoeM" onclick="cancel()">YouTube Link</a></td>
-                    </tr>
-                    <tr class="download" onclick="download('loco-motive')">
-                        <td>Loco Motive</td>
-                        <td>60.087</td>
-                        <td>ezmna59</td>
-                        <td>2.2</td>
-                        <td></td>
-                    </tr>
-                    <tr class="download" onclick="download('tower')">
-                        <td><b>The Tower</b></td>
-                        <td>64.875</td>
-                        <td>Fuyu</td>
-                        <td>2.204</td>
-                        <td>One of the most optimized TASes. Many people worked to find strategies for the main levels (Alex, ShadowyZephyr, and more) </td>
+                        <td>ID:</td>
+                        <td id="levelid"></td>
                     </tr>
                     <tr>
-                        <td>duAlist</td>
-                        <td>65.729</td>
-                        <td>Vinsterplays</td>
-                        <td>2.2</td>
-                        <td><a href="https://www.youtube.com/watch?v=Uqm_boHevLg" onclick="cancel()">YouTube Link</a></td>
-                    </tr>
-                    <tr class="download" onclick="download('blink-blink-blink')">
-                        <td>Blink Blink Blink</td>
-                        <td>68.025</td>
-                        <td>Toster</td>
-                        <td>2.202</td>
-                        <td></td>
-                    </tr>
-                    <tr class="download" onclick="download('subterranean-odyssey')">
-                        <td>Subterranean Odyssey</td>
-                        <td>69.591</td>
-                        <td>ShadowyZephyr</td>
-                        <td>2.204</td>
-                        <td></td>
-                    </tr>
-                    <tr class="download" onclick="download('tower-100%')">
-                        <td><b>The Tower - 100%</b></td>
-                        <td>71.566</td>
-                        <td>ShadowyZephyr</td>
-                        <td>2.204</td>
-                        <td></td>
-                    </tr>
-                    <tr class="download" onclick="download('sewers')">
-                        <td><b>The Sewers</b></td>
-                        <td>72.279</td>
-                        <td>Fuyu</td>
-                        <td>2.204</td>
-                        <td>One of the most optimized TASes. Many people worked to find strategies for the main levels (Alex, ShadowyZephyr, and more)</td>
-                    </tr>
-                    <tr class="download" onclick="download('cellar')">
-                        <td><b>The Cellar</b></td>
-                        <td>76.429</td>
-                        <td>ShadowyZephyr</td>
-                        <td>2.204</td>
-                        <td>One of the most optimized TASes. Many people worked to find strategies for the main levels</td>
-                    </tr>
-                    <tr class="download" onclick="download('sewers-100%')">
-                        <td><b>The Sewers - 100%</b></td>
-                        <td>79.604</td>
-                        <td>ShadowyZephyr</td>
-                        <td>2.204</td>
-                        <td></td>
-                    </tr>
-                    <tr class="download" onclick="download('pseudo-zone')">
-                        <td>Pseudo Zone</td>
-                        <td>84.779</td>
-                        <td>ShadowyZephyr</td>
-                        <td>2.204</td>
-                        <td><a onclick="cancel()" href="https://www.youtube.com/watch?v=wxgFvhChfVw"></a>YouTube Link</a></td>
+                        <td>Creator:</td>
+                        <td id="creator"></td>
                     </tr>
                     <tr>
-                        <td>Terminal Heaven</td>
-                        <td>88.699</td>
-                        <td>Vinsterplays</td>
-                        <td>2.204</td>
-                        <td><a href="https://www.youtube.com/watch?v=0WBmGtWY0dg" onclick="cancel()">YouTube Link</a></td>
+                        <td>TPS:</td>
+                        <td id="tps"></td>
                     </tr>
-                    <tr class="download" onclick="download('i-wanna-beat-acheron')">
-                        <td>IWannaBeatAcheron</td>
-                        <td>102.158</td>
-                        <td>ShadowyZephyr</td>
-                        <td>2.204</td>
-                        <td>360 TPS. Kinda broken, press left briefly before it starts to align. <a href="https://www.youtube.com/watch?v=pDyRCzjzaek" onclick="cancel()">YouTube Link</a></td>
-                    </tr>
-                    <tr class="download" onclick="download('coaster-mountain')">
-                        <td>Coaster Mountain</td>
-                        <td>102.862</td>
-                        <td>ShadowyZephyr</td>
-                        <td>2.204</td>
-                        <td>Kinda broken, press right briefly before it starts to align</td>
-                    </tr>
-                    <tr class="download" onclick="download('old-site-gdside')">
-                        <td>old site gdside</td>
-                        <td>105.220</td>
-                        <td>Fuyu</td>
-                        <td>2.204</td>
-                        <td><a href="https://www.youtube.com/watch?v=KK6NABvWFQU" onclick="cancel()">YouTube Link</a></td>
-                    </tr>
-                    <tr>
-                        <td>Tower of Infinity</td>
-                        <td>117.55</td>
-                        <td>alex</td>
-                        <td>2.2</td>
-                        <td><a href="https://www.youtube.com/watch?v=6QDSF_9Nr9A" onclick="cancel()">YouTube Link</a> </td>
-                    </tr>
-                    <tr class="download" onclick="download('22-trials-of-pain')">
-                        <td>22 Trials of PAIN</td>
-                        <td>122.079</td>
-                        <td>Fuyu</td>
-                        <td>2.204</td>
-                        <td><a href="https://www.youtube.com/watch?v=hklgxBLOk0A" onclick="cancel()">YouTube Link</a></td>
-                    </tr>
-                    <tr>
-                        <td>I Made This Level</td>
-                        <td>141.897</td>
-                        <td>alex</td>
-                        <td>2.2</td>
-                        <td> <a href="https://www.youtube.com/watch?v=0RjtZo00ELI" onclick="cancel()">YouTube Link</a> </td>
-                    </tr>
-                    <tr class="download" onclick="download('baddie-castle')">
-                        <td>Baddie Castle</td>
-                        <td>142.050</td>
-                        <td>ShadowyZephyr</td>
-                        <td>2.204</td>
-                        <td><a href="https://youtu.be/wUg7RZ95wsQ" onclick="cancel()">YouTube Link</a></td>
-                    </tr>
-                    <tr class="download" onclick="download('gd-tower-tiny-square')">
-                        <td>GD Tower Tiny Square</td>
-                        <td>151.858</td>
-                        <td>Vibri</td>
-                        <td>2.202</td>
-                        <td></td>
-                    </tr>
-                    <tr class="download" onclick="download('the-abyss')">
-                        <td>The Abyss</td>
-                        <td>365.730</td>
-                        <td>sear</td>
-                        <td>2.204</td>
-                        <td>300TPS (marginal physics change) <a onclick="cancel()" href="https://www.youtube.com/watch?v=yUqTrtyMBQI" onclick="cancel()">YouTube Link</a></td>
-                    </tr>   
-                </tbody>
-            </table>
-            <p> Owner: ShadowyZephyr ('shadowyzephyr' on discord) </p>
-            <p> Creator of yBot: kepe </p>
-            <p> TAS times from: </p>
-            <p> ezmna59, zetex, watersquarez, Toster, alex, NotBelugaFan, Vinsterplayz Vibri, sear, C00L, Fuyu, dudodo </p>
+                </table>
+                <p id="desc" style="width: 720px;"></p>
+                <button class="download" id="download-ybot">
+                    <img src="/tas-project/assets/ybot.webp"></img>
+                    Download yBot
+                </button>
+                <br>
+                <button class="download" id="download-mh">
+                    <img src="/tas-project/assets/megahack.png"></img>
+                    Download MegaHack Replay
+                </button>
+            </div>
+        </div>
+        <div id="sidenav-right">
+            <h2>Search by:</h2>
+            <input type="radio" class="searchFilter" id="sf0" name="searchFilter">
+            <label for="sf0">Level</label><br>
+            <input type="radio" class="searchFilter" id="sf1" name="searchFilter">
+            <label for="sf1">Creator</label><br>
+            <input type="radio" class="searchFilter" id="sf2" name="searchFilter">
+            <label for="sf2">TASer</label>
+        </div>
     </body>
 </html>
