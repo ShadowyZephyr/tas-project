@@ -357,7 +357,7 @@ var fullMacroData = {
             "tps": 240,
             "contributor": "Fuyu",
             "version": 2.204,
-            "video": "https://youtu.be/UhP3qxDpJt0?si=vKIuB3kJbS7wZyI7",
+            "video": "https://www.youtube.com/embed/UhP3qxDpJt0",
             "download": false,
             "desc": false
         },
@@ -952,7 +952,7 @@ var fullMacroData = {
             "tps": 240,
             "contributor": "ShadowyZephyr",
             "version": 2.204,
-            "video": "https://youtu.be/q7KeJFryZjI?t=162",
+            "video": "https://www.youtube.com/embed/q7KeJFryZjI",
             "download": true,
             "desc": "One of the most optimized TASes. Many people worked to find strategies for the main levels."
         },
@@ -1122,7 +1122,7 @@ var fullMacroData = {
             "tps": 240,
             "contributor": "ShadowyZephyr",
             "version": 2.204,
-            "video": "https://youtu.be/wUg7RZ95wsQ",
+            "video": "https://www.youtube.com/embed/wUg7RZ95wsQ",
             "download": true,
             "desc": false
         },
