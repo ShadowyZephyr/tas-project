@@ -6,6 +6,7 @@ let searchFilter = 'name';
 let sorting = 'time';
 const macros = fullMacroData.macros;
 const searchFilters = ['name','creator','contributor'];
+let macrosLength;
 window.onload = (e) => {
     document.getElementById('sf0').checked = true;
     infobox = document.getElementById('infobox');
@@ -112,6 +113,7 @@ function display(items) {
     document.getElementById('tasTableBody').innerHTML = '';
     const start = (page - 1) * (rowsPerPage);
     const end = page * (rowsPerPage) - 1;
+    macrosLength = items.length;
     const toDisplay = items.slice(start,end+1);
     for (let i = 0; i < toDisplay.length; i++) {
         const rowData = toDisplay[i];
@@ -138,7 +140,7 @@ function display(items) {
     counter.innerText = 'Page ' + page + ' (showing ' + (start+1) + '-' + Math.min(end+1,items.length) + ' of ' + items.length + ')';
 }
 function next() {
-    if (page < currentMacros.length/rowsPerPage) {
+    if (page < macrosLength/rowsPerPage) {
         page += 1;
         rateFilter();
     }
