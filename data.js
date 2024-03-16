@@ -946,7 +946,7 @@ var fullMacroData = {
             "levelid": "5003",
             "mode": "platformer",
             "rating": 0,
-            "difficulty": 14,
+            "difficulty": 7,
             "bot": ["ybot"],
             "time": 76.429,
             "tps": 240,
@@ -974,6 +974,23 @@ var fullMacroData = {
             "desc": false
         },
         {
+            "id": "cellar-100",
+            "name": "The Cellar (100%)",
+            "creator": "RobTop",
+            "levelid": "5003",
+            "mode": "platformer",
+            "rating": -1,
+            "difficulty": 7,
+            "bot": ["mhr"],
+            "time": 88.033,
+            "tps": 240,
+            "contributor": "ShadowyZephyr",
+            "version": 2.204,
+            "video": "https://www.youtube.com/embed/vKeSCcIexhc?start=179",
+            "download": true,
+            "desc": "One of the most optimized TASes. Many people worked to find strategies for the main levels."
+        },
+        {
             "id": "terminal-heaven",
             "name": "Terminal Heaven",
             "creator": "G4lvatron",
@@ -989,6 +1006,23 @@ var fullMacroData = {
             "video": "https://www.youtube.com/embed/0WBmGtWY0dg",
             "download": false,
             "desc": false
+        },
+        {
+            "id": "sewers-100",
+            "name": "The Sewers (100%)",
+            "creator": "RobTop",
+            "levelid": "5002",
+            "mode": "platformer",
+            "rating": -1,
+            "difficulty": 6,
+            "bot": ["mhr"],
+            "time": 89.583,
+            "tps": 240,
+            "contributor": "ShadowyZephyr",
+            "version": 2.204,
+            "video": "https://www.youtube.com/embed/vKeSCcIexhc?start=80",
+            "download": true,
+            "desc": "One of the most optimized TASes. Many people worked to find strategies for the main levels."
         },
         {
             "id": "i-wanna-beat-acheron",
