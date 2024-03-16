@@ -1204,7 +1204,7 @@ var fullMacroData = {
             "difficulty": 14,
             "bot": ["ybot"],
             "time": 381.912,
-            "tps": 300,
+            "tps": 240,
             "contributor": "sear, erzor",
             "version": 2.204,
             "video": "https://www.youtube.com/embed/vGiwAgO6mpo",
