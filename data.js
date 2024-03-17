@@ -1209,7 +1209,7 @@ var fullMacroData = {
             "version": 2.204,
             "video": "https://www.youtube.com/embed/vGiwAgO6mpo",
             "download": true,
-            "desc": "300TPS (slight physics change)."
+            "desc": false
         }
     ]
 }
