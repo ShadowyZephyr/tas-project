@@ -103,7 +103,7 @@ var fullMacroData = {
             "contributor": "sear",
             "version": 2.204,
             "video": "https://www.youtube.com/embed/i3qL9yFt1q0",
-            "download": false,
+            "download": true,
             "desc": "by likegg & more"
         },
         {
@@ -477,7 +477,7 @@ var fullMacroData = {
             "contributor": "sear",
             "version": 2.204,
             "video": "https://www.youtube.com/embed/JMDWzpBMdNk",
-            "download": false,
+            "download": true,
             "desc": false
         },
         {
@@ -1105,7 +1105,7 @@ var fullMacroData = {
             "tps": 240,
             "contributor": "sear",
             "version": 2.204,
-            "video": false,
+            "video": "https://www.youtube.com/embed/B1MSp8whwWc",
             "download": true,
             "desc": false
         },
@@ -1208,7 +1208,7 @@ var fullMacroData = {
             "contributor": "sear, erzor",
             "version": 2.204,
             "video": "https://www.youtube.com/embed/vGiwAgO6mpo",
-            "download": false,
+            "download": true,
             "desc": "300TPS (slight physics change)."
         }
     ]
