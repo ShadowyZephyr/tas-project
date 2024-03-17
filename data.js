@@ -1189,7 +1189,7 @@ var fullMacroData = {
             "time": 141.637,
             "tps": 240,
             "contributor": "Zettaminx",
-            "version": 2.2,
+            "version": 2.204,
             "video": "https://www.youtube.com/embed/AuwXkIkWUeE",
             "download": true,
             "desc": false
