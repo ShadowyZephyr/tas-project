@@ -753,6 +753,23 @@ var fullMacroData = {
             "desc": false
         },
         {
+            "id": "enjoying-the-sun",
+            "name": "Enjoying The Sun",
+            "creator": "AutoNick",
+            "levelid": "97459884",
+            "mode": "platformer",
+            "rating": 3,
+            "difficulty": 5,
+            "bot": ["ybot"],
+            "time": 50.037,
+            "tps": 240,
+            "contributor": "ShadowyZephyr",
+            "version": 2.204,
+            "video": false,
+            "download": true,
+            "desc": "Doesn't always work due to randomness in the dungeon part"
+        },
+        {
             "id": "dashing-over-it",
             "name": "Dashing Over It",
             "creator": "Halapeenyo",
