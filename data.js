@@ -1042,6 +1042,23 @@ var fullMacroData = {
             "desc": false
         },
         {
+            "id": "dash",
+            "name": "Dash",
+            "creator": "RobTop",
+            "levelid": "22",
+            "mode": "classic",
+            "rating": -1,
+            "difficulty": 9,
+            "bot": ["ybot","mhr"],
+            "time": 85.77,
+            "tps": 240,
+            "contributor": "ShadowyZephyr",
+            "version": 2.204,
+            "video": "https://www.youtube.com/embed/Ir2gPqjhX7U",
+            "download": true,
+            "desc": false
+        },
+        {
             "id": "cellar-100",
             "name": "The Cellar (100%)",
             "creator": "RobTop",
