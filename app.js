@@ -85,7 +85,7 @@ const onClick = (event) => {
     }
 }
 window.addEventListener('click', onClick);
-function rateFilter() {
+function filterMacros() {
     let filter = [];
     const elems = document.getElementsByClassName('rateFilter')
     for (let i = 0; i < elems.length; i++) {
@@ -99,7 +99,20 @@ function rateFilter() {
             tempMacros.push(macro);
         }
     }
-    display(tempMacros);
+    filter = [];
+    let tempMacros2 = [];
+    if(document.getElementById('platformer').checked) {
+        filter.push('platformer');
+    }
+    if(document.getElementById('classic').checked) {
+        filter.push('classic');
+    }
+    for(const macro of tempMacros) {
+        if(filter.includes(macro.mode)) {
+            tempMacros2.push(macro);
+        }
+    }
+    display(tempMacros2);
 }
 function download(name, folder, filetype) {
     let a = document.getElementById('downloader');
@@ -142,13 +155,13 @@ function display(items) {
 function next() {
     if (page < macrosLength/rowsPerPage) {
         page += 1;
-        rateFilter();
+        filterMacros();
     }
 }
 function previous() {
     if(page > 1) {
         page -= 1;
-        rateFilter();
+        filterMacros();
     }
 }
 function search() {
@@ -160,7 +173,7 @@ function search() {
             currentMacros.push(macro);
         }
     }
-    rateFilter();
+    filterMacros();
 }
 function fixCase(thing) {
     if(typeof thing == 'string') {
