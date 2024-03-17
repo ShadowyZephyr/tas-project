@@ -1,5 +1,5 @@
 var fullMacroData = {
-    "contributors": ["ezmna59", "zetex", "watersquarez", "Toster", "alex", "NotBelugaFan", "Vinsterplayz", "Vibri", "sear", "C00L", "Fuyu", "dudodo"],
+    "contributors": ["ezmna59", "zetex", "watersquarez", "Toster", "alex", "NotBelugaFan", "Vinsterplayz", "Vibri", "sear", "C00L", "Fuyu", "dudodo", "Zettaminx"],
     "difficulties": ["NA", "Auto", "Easy", "Normal", "Hard", "Hard", "Harder", "Harder", "Insane", "Insane", "Easy Demon", "Medium Demon", "Hard Demon", "Insane Demon", "Extreme Demon", "No Victors (ILL)"],
     "ratings": ["Unrated", "Rated", "Featured", "Epic", "Legendary", "Mythic"],
     "ill": ["candy-crush-buff","permafrost-peaks"],
@@ -855,6 +855,23 @@ var fullMacroData = {
             "desc": false
         },
         {
+            "id": "infiltration",
+            "name": "Infiltration",
+            "creator": "KingEggplant987",
+            "levelid": "101619476",
+            "mode": "platformer",
+            "rating": 1,
+            "difficulty": 10,
+            "bot": ["ybot"],
+            "time": 63.391,
+            "tps": 240,
+            "contributor": "Zettaminx",
+            "version": 2.204,
+            "video": "https://www.youtube.com/embed/CAd2mDzTgSQ",
+            "download": true,
+            "desc": false
+        },
+        {
             "id": "tower",
             "name": "The Tower",
             "creator": "RobTop",
@@ -972,6 +989,23 @@ var fullMacroData = {
             "video": "https://www.youtube.com/embed/q7KeJFryZjI",
             "download": true,
             "desc": "One of the most optimized TASes. Many people worked to find strategies for the main levels."
+        },
+        {
+            "id": "beneath-the-bouncer",
+            "name": "Beneath The Bouncer",
+            "creator": "Und3rcov3r",
+            "levelid": "97701937",
+            "mode": "platformer",
+            "rating": 1,
+            "difficulty": 3,
+            "bot": ["ybot"],
+            "time": 82.137,
+            "tps": 240,
+            "contributor": "Zettaminx",
+            "version": 2.204,
+            "video": false,
+            "download": true,
+            "desc": false
         },
         {
             "id": "pseudo-zone",
@@ -1140,6 +1174,23 @@ var fullMacroData = {
             "contributor": "Fuyu",
             "version": 2.204,
             "video": "https://www.youtube.com/embed/hklgxBLOk0A",
+            "download": true,
+            "desc": false
+        },
+        {
+            "id": "tower-of-rage",
+            "name": "Tower of Rage",
+            "creator": "Nontypical",
+            "levelid": "100782112",
+            "mode": "platformer",
+            "rating": 1,
+            "difficulty": 10,
+            "bot": ["ybot"],
+            "time": 141.637,
+            "tps": 240,
+            "contributor": "Zettaminx",
+            "version": 2.2,
+            "video": "https://www.youtube.com/embed/AuwXkIkWUeE",
             "download": true,
             "desc": false
         },
