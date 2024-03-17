@@ -129,7 +129,7 @@ var fullMacroData = {
             "creator": "heda",
             "levelid": "97704668",
             "mode": "platformer",
-            "rating": 0,
+            "rating": 1,
             "difficulty": 7,
             "bot": ["ybot"],
             "time": 13.058,
