@@ -102,7 +102,7 @@ var fullMacroData = {
             "tps": 240,
             "contributor": "sear",
             "version": 2.204,
-            "video": "https://www.youtube.com/embed/i3qL9yFt1q0",
+            "video": "https://www.youtube.com/embed/jldYyXEtasY",
             "download": true,
             "desc": "by likegg & more"
         },
