@@ -1025,6 +1025,23 @@ var fullMacroData = {
             "desc": false
         },
         {
+            "id": "hexagon-force",
+            "name": "Hexagon Force",
+            "creator": "RobTop",
+            "levelid": "16",
+            "mode": "classic",
+            "rating": -1,
+            "difficulty": 9,
+            "bot": ["mhr","ybot"],
+            "time": 82.30,
+            "tps": 240,
+            "contributor": "ShadowyZephyr",
+            "version": 2.204,
+            "video": false,
+            "download": true,
+            "desc": false
+        },
+        {
             "id": "pseudo-zone",
             "name": "Pseudo Zone",
             "creator": "NinKaz",
@@ -1108,6 +1125,23 @@ var fullMacroData = {
             "video": "https://www.youtube.com/embed/vKeSCcIexhc?start=80",
             "download": true,
             "desc": "One of the most optimized TASes. Many people worked to find strategies for the main levels."
+        },
+        {
+            "id": "deadlocked",
+            "name": "Deadlocked",
+            "creator": "RobTop",
+            "levelid": "20",
+            "mode": "classic",
+            "rating": -1,
+            "difficulty": 10,
+            "bot": ["mhr","ybot"],
+            "time": 98.39,
+            "tps": 240,
+            "contributor": "ShadowyZephyr",
+            "version": 2.204,
+            "video": false,
+            "download": true,
+            "desc": "Saves ~0.16s vs regular completion."
         },
         {
             "id": "i-wanna-beat-acheron",
