@@ -646,7 +646,7 @@ var fullMacroData = {
             "tps": 240,
             "contributor": "ShadowyZephyr",
             "version": 2.204,
-            "video": false,
+            "video": "https://www.youtube.com/embed/GXHzF-mEdzg",
             "download": true,
             "desc": "Alignment bug, press left on frame 0"
         },
