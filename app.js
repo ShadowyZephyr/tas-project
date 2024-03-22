@@ -34,7 +34,7 @@ const onClick = (event) => {
     } else if (elem.id == 'previous') {
         previous();
     } else if (elem.id == 'x') {
-        document.getElementById('video').classList.remove('shown');
+        document.getElementById('videoFilter').classList.remove('shown');
         hideButtons();
         infobox.style.visibility = 'hidden';
     } else if (Array.from(elem.classList).includes('download')) {
@@ -113,7 +113,7 @@ function filterMacros() {
             filter.botFilter.push(bots[i].id);
         }
     }
-    if(!(document.getElementById('video').checked)) {
+    if(!(document.getElementById('videoFilter').checked)) {
         filter.videoFilter = [true];
     }
     console.log(filter.videoFilter);
