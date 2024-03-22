@@ -49,8 +49,7 @@
             <h3> 
                 This is a collection of GD TAS runs. You can click the table headers to sort. Click on macro to get more information.
                 <br>Macros not from the latest update are probably broken, but kept here for history.
-                <br><span style="color: red;"> Please DO NOT run these on the actual levels, make a copy so your time doesn't save on the leaderboard.</span>
-                <br>If you want me to TAS a level, either DM me on discord (shadowyzephyr) or request one <a href="https://forms.gle/HiPe7E8rYauGc5Ff7">here</a>.
+                <br><span style="color: red;"> Please DO NOT run these on the actual levels, make a copy/use safe mode so your time doesn't save on the leaderboard.</span>
             </h3>
             <div id="inner">
                 <input type="text" id="levelSearch" onkeyup="search('name')" placeholder="Search here...">
@@ -73,15 +72,10 @@
                     <tbody id="tasTableBody">    
                     </tbody>
                 </table>
+                <h2>Credits</h2>
                 <p> Owner: ShadowyZephyr ('shadowyzephyr' on discord) </p>
-                <p> Bot Creators: </p>
-                <ul>
-                    <li>kepe - yBot </li>
-                    <li>Absolllute - Mega Hack Replay</li>
-                    <li>Zilko - xdBot</li>
-                </ul>
-                <p> TAS Contributors: </p>
-                <p> ezmna59, zetex, watersquarez, Toster, alex, NotBelugaFan, Vinsterplayz Vibri, sear, C00L, Fuyu, dudodo, Zettaminx </p>
+                <p> Bot Creators: kepe (yBot), Absolllute (Mega Hack Replay)</p>
+                <p> TAS Contributors: ezmna59, zetex, watersquarez, Toster, alex, NotBelugaFan, Vinsterplayz, Vibri, sear, C00L, Fuyu, dudodo, Zettaminx </p>
             </div>
             <div class="hidden" id="infobox">
                 <button id="x">X</button>
@@ -136,6 +130,75 @@
                     <li> Classic: The run must either save time somewhere in the level via a skip, OR show off swag routes in the level that are very hard/impossible for a human to perform. Macro must be provided so I can time it using the GD autosplitter. </li>
                 </ul>
             </p>
+            <h2>FAQ</h2>
+            <h3>What is TAS?</h3>
+            <p>Basically, using botting tools trying to push GD levels to their theoretical limit in order to create a hypothetical speedrun that goes as fast as possible, and/or does otherwise humanly impossible tricks. See <a href="https://en.wikipedia.org/wiki/Tool-assisted_speedrun">Wikipedia</a> for more info.</p>
+            <h3>Why are classic levels here?</h3>
+            <p>Many classic levels have big timesaves in the run due to skipping speed portals or just cool tricks to show off, and there is a subgroup of the GD speedrunning community that runs these levels.</p>
+            <h3>Why not convert all the replays to both bots?</h3>
+            <p>Because kepe, the creator of ybot, made the ybot to plaintext converter (which I need to convert from ybot to gdr) an exe program you have to run, I can't convert on the website via code. I have to do each macro manually, which takes a long time. I'm not willing to go through 60 old macros and convert them all at the moment, so if you want just one converted, just DM me (shadowyzephyr on discord) and I'll see if I can do it that day.</p>
+            <h3>A macro I downloaded broke, why?</h3>
+            <p>Here are some reasons this could happen:</p>
+            <ul>
+                <li>
+                    If the macro is not from the most recent version (2.204), it is almost certainly broken. I am keeping those here for history of what time was possible on a level, but they will probably be remvoed eventually.
+                </li>
+                <li>
+                    Bots don't always playback the first frame of input into a level, what you start off holding. This can cause issues where you need to hold left or right while entering the level, or use frame stepper to pause the level on frame 0, and then hold left or right. It's especially finnicky with MegaHack. If the macro has an alignment issue, it should be in the description of that macro, but it's possible that I made a mistake or forgot to write that in.
+                </li>
+            </ul>
+            <h3>Why can't I get the infobox for macros on mobile?</h3>
+            <p>Just because of the way I made the website. I'll probably fix this later.</p>
+            <h3>I want you/a contributor to make a TAS of a level, how can I request one?</h3>
+            <p>If you want me to TAS a level, either DM me on discord (shadowyzephyr) or request one <a href="https://forms.gle/HiPe7E8rYauGc5Ff7">here</a>. If you're looking for macros of levels, you may want to join the Mega Hack, yBot, or <a href="https://discord.gg/STNS5c7GpK">Macro Sharing Plaza</a> servers.</p>
+            <h3>How do I create a Geometry Dash TAS?</h3>
+            <p>First, you will need to choose a bot. xdbot is free (requires Geode), but can't be used for true platformer TAS runs because the frame fix option changes the physics of the game. It's still a good option for estimating the time of a level, though. The other two bots, yBot and MegaHack, each cost money, and have different pros/cons. </p>
+            <table>
+            <tr>
+                <th>yBot</th>
+                <th>MegaHack Replay</th>
+            </tr>
+            <tr>
+                <td>
+                    <ul>
+                        <li style="color:#009900;">Most accurate (almost 100% accuracy)</li>
+                        <li style="color:#009900;">Has Show Trajectory and autoclicker in the pro version.</li>
+                        <li>Automatically saves recording while you're making it</li>
+                        <li style="color:#cc0000;">Unstable, prone to crashing (crashes a lot more if you don't have 4gb patch)</li>
+                        <li style="color:#cc0000;">Doesn't show precise X/Y position and velocity</li>
+                        <li style="color:#cc0000;">Doesn't work with Geode/MegaHack</li>
+                        <li style="color:#cc0000;">Doesn't handle RNG/random triggers (you need to make a copy of the level and edit the triggers yourself)</li>
+                        <li style="color:#cc0000;">SFX is disabled (if you have both you can record in ybot, convert to megahack and replay it there to get around this)</li>
+                    </ul>
+                </td>
+                <td>
+                    <ul>
+                        <li style="color:#009900;">Shows precise X/Y position, velocity, and has the option to show triggers</li>
+                        <li style="color:#009900;">Integrated with Geode and MegaHack</li>
+                        <li style="color:#009900;">Open .gdr and .gdr.json format</li>
+                        <li style="color:#009900;">Handles RNG/random triggers</li>
+                        <li>Requires manual saving of recorded macros</li>
+                        <li style="color:#cc0000;">Macros often break, especially on harder levels</li>
+                        <li style="color:#cc0000;">Has some bugs that make it more annoying to bot with</li>
+                    </ul>
+                </td>
+            </tr>
+            </table>
+            <p>Alex has a good tutorial on TAS (he is using ybot) <a href="https://www.youtube.com/watch?v=b9rC9jNkpps">here</a>. <br><br> If you're worried about the SFX being disabled for playing regular GD, you can install ybot on a separate GD executable. Here's how to do this:</p> <br>
+            <p style="text-align:left;">
+                1. Copy your Geometry Dash folder from C:/Program Files (x86)/Steam/steamapps/common into another directory, like Desktop. <br>
+                2. In that folder, rename the application GeometryDash.exe to something else. <br>
+                3. Add a file in the new GD folder called "steam_appid.txt" with the content just being the number '322170'. (no quotes, no period)<br>
+                4. Install yBot (or whatever you want) in that folder. <br></p>
+            <p><strong>Some GD TAS tips:</strong></p>
+            <ul>
+                <li>Always keep show hitboxes on. There is no reason not to have it on, unless it's crashing your game, and it's a useful tool.</li>
+                <li>Try to keep as much momentum toward your goal as possible, whether it be getting as far to the right or as far up as possible. Don't bonk on platforms sideways unless you want to slow down, hit your head on platforms strategically to fall faster if necessary, and hold for as long or as little as possible, whatever will maximize your momentum.</li>
+                <li>Usually, turning around by not pressing anything for many frames to slow down is quicker than just switching from right to left or vice versa. If you're using megahack replay, you can see the X velocity. Generally, you want to stop holding, and start holding in the reverse direction once the difference in X velocity between frames is less than 0.18. </li>
+                <li>The cube jumps slightly higher on the second or later jump while holding the button down. If you want to land faster, wait until the frame that you see particles from landing and then click again. The ball goes down slightly faster if you wait for particles.</li>
+                <li>Orbs set your Y velocity to a constant number. They have no cooldown in platformer, so it may be useful at times to spam them. The same applies to UFO jumps (spam them if you need to go up!)</li>
+                <li>There is a bug with the robot in platformer: if you jump into an orb, keep holding down the input you used, and then when you get to the orb, press another input instead of letting go of the first one (for example, jumping with up arrow and then holding space for the orb), you will jump much higher. This can be abused in some levels.</li>
+            </ul>
         </div>
         <div id="sidenav-right">
             <h2>Search by:</h2>
