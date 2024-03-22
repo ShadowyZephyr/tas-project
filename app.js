@@ -85,34 +85,47 @@ const onClick = (event) => {
     }
 }
 window.addEventListener('click', onClick);
+function commonElem(arr1, arr2) {
+    return arr1.some(item => arr2.includes(item))
+}
 function filterMacros() {
-    let filter = [];
-    const elems = document.getElementsByClassName('rateFilter')
+    const filter = {
+        rateFilter: [],
+        typeFilter: [],
+        botFilter: [],
+        videoFilter: [false, true]
+    }
+    const elems = document.getElementsByClassName('rateFilter');
+    const bots = document.getElementsByClassName('botFilter');
     for (let i = 0; i < elems.length; i++) {
         if (elems[i].checked) {
-            filter.push(i);
+            filter.rateFilter.push(i);
         }
     }
+    if(document.getElementById('platformer').checked) {
+        filter.typeFilter.push('platformer');
+    }
+    if(document.getElementById('classic').checked) {
+        filter.typeFilter.push('classic');
+    }
+    for (let i = 0; i < bots.length; i++) {
+        if (bots[i].checked) {
+            filter.botFilter.push(bots[i].id);
+        }
+    }
+    if(!(document.getElementById('video').checked)) {
+        filter.videoFilter = [true];
+    }
+    console.log(filter.videoFilter);
     let tempMacros = [];
     for(const macro of currentMacros) {
-        if(filter.includes(macro.rating + 1)) {
+            const hasVideo = macro.video ? true : false;
+        console.log(filter.rateFilter.includes(macro.rating + 1),filter.typeFilter.includes(macro.mode),commonElem(filter.botFilter,macro.bot),filter.videoFilter.includes(macro.video))
+        if(filter.rateFilter.includes(macro.rating + 1) && filter.typeFilter.includes(macro.mode) && commonElem(filter.botFilter,macro.bot) && filter.videoFilter.includes(hasVideo)) {
             tempMacros.push(macro);
         }
     }
-    filter = [];
-    let tempMacros2 = [];
-    if(document.getElementById('platformer').checked) {
-        filter.push('platformer');
-    }
-    if(document.getElementById('classic').checked) {
-        filter.push('classic');
-    }
-    for(const macro of tempMacros) {
-        if(filter.includes(macro.mode)) {
-            tempMacros2.push(macro);
-        }
-    }
-    display(tempMacros2);
+    display(tempMacros);
 }
 function download(name, folder, filetype) {
     let a = document.getElementById('downloader');

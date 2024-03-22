@@ -634,6 +634,23 @@ var fullMacroData = {
             "desc": "One of the first rated platformers. Thanks to Alex for creating a TAS first, I used it to help me make this one. 30.1x probably possible"
         },
         {
+            "id": "the-golden-tower",
+            "name": "The Golden Tower",
+            "creator": "BridgetTheCroco",
+            "levelid": "97698751",
+            "mode": "platformer",
+            "rating": 1,
+            "difficulty": 2,
+            "bot": ["ybot","mhr"],
+            "time": 30.458,
+            "tps": 240,
+            "contributor": "ShadowyZephyr",
+            "version": 2.204,
+            "video": false,
+            "download": true,
+            "desc": "Alignment bug, press left on frame 0"
+        },
+        {
             "id": "cobblestone-crypts",
             "name": "Cobblestone Crypts",
             "creator": "InfernoZXV",
