@@ -1275,7 +1275,7 @@ var fullMacroData = {
             "tps": 240,
             "contributor": "LucaGoku",
             "version": 2.204,
-            "video": "https://www.youtube.com/embed/Vz4wgBbApik&t=71s",
+            "video": "https://www.youtube.com/embed/Vz4wgBbApik",
             "download": true,
             "desc": false
         },
