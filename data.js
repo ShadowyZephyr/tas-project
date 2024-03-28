@@ -895,7 +895,7 @@ var fullMacroData = {
             "levelid": "101269702",
             "mode": "platformer",
             "rating": 0,
-            "difficulty": 14,
+            "difficulty": 15,
             "bot": ["ybot"],
             "time": 62.466,
             "tps": 240,
