@@ -889,6 +889,23 @@ var fullMacroData = {
             "desc": false
         },
         {
+            "id": "silent-hills",
+            "name": "Silent Hills",
+            "creator": "walterberg",
+            "levelid": "101269702",
+            "mode": "platformer",
+            "rating": 0,
+            "difficulty": 14,
+            "bot": ["ybot"],
+            "time": 62.466,
+            "tps": 240,
+            "contributor": "sear",
+            "version": 2.204,
+            "video": "https://www.youtube.com/embed/Ng62-N0wWz8",
+            "download": true,
+            "desc": false
+        },
+        {
             "id": "infiltration",
             "name": "Infiltration",
             "creator": "KingEggplant987",
@@ -1243,6 +1260,23 @@ var fullMacroData = {
             "version": 2.2,
             "video": "https://www.youtube.com/embed/6QDSF_9Nr9A",
             "download": false,
+            "desc": false
+        },
+        {
+            "id": "patio-light",
+            "name": "Patio Light",
+            "creator": "KEaliTgeo",
+            "levelid": "99701334",
+            "mode": "platformer",
+            "rating": 0,
+            "difficulty": 14,   
+            "bot": ["mhr"],
+            "time": 118.679,
+            "tps": 240,
+            "contributor": "LucaGoku",
+            "version": 2.204,
+            "video": "https://www.youtube.com/embed/Vz4wgBbApik&t=71s",
+            "download": true,
             "desc": false
         },
         {
