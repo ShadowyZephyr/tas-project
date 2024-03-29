@@ -137,9 +137,12 @@ function download(name, folder, filetype) {
 }   
 function display(items) {
     document.getElementById('tasTableBody').innerHTML = '';
+    macrosLength = items.length;
+    if (page > macrosLength/rowsPerPage) {
+        page = Math.max(Math.ceil(macrosLength/rowsPerPage),1);
+    }
     const start = (page - 1) * (rowsPerPage);
     const end = page * (rowsPerPage) - 1;
-    macrosLength = items.length;
     const toDisplay = items.slice(start,end+1);
     for (let i = 0; i < toDisplay.length; i++) {
         const rowData = toDisplay[i];
