@@ -935,7 +935,7 @@ var fullMacroData = {
             "tps": 240,
             "contributor": "Fuyu",
             "version": 2.204,
-            "video": "https://www.youtube.com/embed/6S8jzN_2vGA",
+            "video": "https://www.youtube.com/embed/VtNjZuADcDk",
             "download": true,
             "desc": false
         },
