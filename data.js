@@ -193,7 +193,7 @@ var fullMacroData = {
         },
         {
             "id": "ruined",
-            "name": "Ruined",
+            "name": " Ruined",
             "creator": "erzor",
             "levelid": "97930264",
             "mode": "platformer",
