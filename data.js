@@ -199,14 +199,14 @@ var fullMacroData = {
             "mode": "platformer",
             "rating": 0,
             "difficulty": 15,
-            "bot": ["ybot"],
-            "time": 14.412,
+            "bot": ["mhr"],
+            "time": 13.887,
             "tps": 240,
-            "contributor": "ShadowyZephyr",
+            "contributor": "Fuyu",
             "version": 2.204,
-            "video": "https://www.youtube.com/embed/Qph12gXkUx0",
+            "video": "https://www.youtube.com/embed/4c3XD9X9d00",
             "download": true,
-            "desc": "Macro broken, press left on frame 0 to align"
+            "desc": false
         },
         {
             "id": "candy-crush-buff",
