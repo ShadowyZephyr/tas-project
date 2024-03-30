@@ -1,6 +1,6 @@
 var fullMacroData = {
     "contributors": ["ezmna59", "zetex", "watersquarez", "Toster", "alex", "NotBelugaFan", "Vinsterplayz", "Vibri", "sear", "C00L", "Fuyu", "dudodo", "Zettaminx"],
-    "difficulties": ["NA", "Auto", "Easy", "Normal", "Hard", "Hard", "Harder", "Harder", "Insane", "Insane", "Easy Demon", "Medium Demon", "Hard Demon", "Insane Demon", "Extreme Demon", "No Victors (ILL)"],
+    "difficulties": ["NA", "Auto", "Easy", "Normal", "Hard", "Hard", "Harder", "Harder", "Insane", "Insane", "Easy Demon", "Medium Demon", "Hard Demon", "Insane Demon", "Extreme Demon", "No Victors (ILL)", "Humanly Impossible (PPPLL)"],
     "ratings": ["Unrated", "Rated", "Featured", "Epic", "Legendary", "Mythic"],
     "ill": ["candy-crush-buff","permafrost-peaks"],
     "macros": [
@@ -319,11 +319,11 @@ var fullMacroData = {
             "rating": 0,
             "difficulty": 14,
             "bot": ["mhr"],
-            "time": 16.895,
+            "time": 16.175,
             "tps": 240,
-            "contributor": "LucaGEMD",
+            "contributor": "Fuyu",
             "version": 2.204,
-            "video": "https://www.youtube.com/embed/jUutfspScTw",
+            "video": "https://www.youtube.com/embed/ffWcR0JIHGk",
             "download": true,
             "desc": false
         },
@@ -766,6 +766,23 @@ var fullMacroData = {
             "contributor": "ShadowyZephyr",
             "version": 2.204,
             "video": "https://www.youtube.com/embed/EAADEDbYG5I",
+            "download": true,
+            "desc": false
+        },
+        {
+            "id": "retray-platformer",
+            "name": "Retray Platformer",
+            "creator": "7312",
+            "levelid": "98145818",
+            "mode": "platformer",
+            "rating": 0,
+            "difficulty": 16,
+            "bot": ["mhr"],
+            "time": 37.804,
+            "tps": 240,
+            "contributor": "LucaGEMD",
+            "version": 2.204,
+            "video": "https://www.youtube.com/embed/xEn0pE0gurw",
             "download": true,
             "desc": false
         },
