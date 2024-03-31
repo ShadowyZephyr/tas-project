@@ -709,14 +709,14 @@ var fullMacroData = {
             "mode": "platformer",
             "rating": 2,
             "difficulty": 6,
-            "bot": ["ybot"],
-            "time": 29.854,
+            "bot": ["mhr"],
+            "time": 29.825,
             "tps": 240,
-            "contributor": "ShadowyZephyr",
+            "contributor": "Fuyu",
             "version": 2.204,
-            "video": "https://www.youtube.com/embed/Xm_VmjXUrlY",
+            "video": "https://www.youtube.com/embed/t_N181fMcn8",
             "download": true,
-            "desc": "One of the first rated platformers. Thanks to Alex for creating a TAS first, I used it to help me make this one. 30.1x probably possible"
+            "desc": "One of the first rated platformers."
         },
         {
             "id": "the-golden-tower",
