@@ -629,7 +629,7 @@ var fullMacroData = {
             "tps": 240,
             "contributor": "ezmna59",
             "version": 2.202,
-            "video": false,
+            "video": false, 
             "download": true,
             "desc": false
         },
@@ -769,6 +769,23 @@ var fullMacroData = {
             "download": true,
             "desc": false
         },
+        {   
+            "id": "idling-somewhere",
+            "name": "Idling Somewhere",
+            "creator": "Hychie",
+            "levelid": "99170473",
+            "mode": "platformer",
+            "rating": 2,
+            "difficulty": 10,
+            "bot": ["ybot"],
+            "time": 33.133,
+            "tps": 240,
+            "contributor": "sear",
+            "version": 2.204,
+            "video": "https://www.youtube.com/embed/orEEe6DG_4A",
+            "download": true,
+            "desc": false
+        },
         {
             "id": "a-christmas-delivery",
             "name": "A Christmas Delivery",
@@ -811,12 +828,12 @@ var fullMacroData = {
             "mode": "platformer",
             "rating": 1,
             "difficulty": 13,
-            "bot": ["ybot"],
-            "time": 38.433,
-            "tps": 240,
-            "contributor": "sear",
+            "bot": ["mhr"],
+            "time": 38.095,
+            "tps": 240, 
+            "contributor": "Fuyu",
             "version": 2.204,
-            "video": "https://www.youtube.com/embed/twfNlUSRYz8",
+            "video": "https://www.youtube.com/embed/g4y8S_FbuaU",
             "download": true,
             "desc": false
         },
@@ -1280,6 +1297,23 @@ var fullMacroData = {
             "desc": "One of the most optimized TASes. Many people worked to find strategies for the main levels."
         },
         {
+            "id": "i-wanna-kill-the-santeno",
+            "name": "I WANNA KILL THE SANTENO",
+            "creator": "DrakXD109",
+            "levelid": "100638312",
+            "mode": "platformer",
+            "rating": 0,
+            "difficulty": 15,
+            "bot": ["mhr"],
+            "time": 85.879,
+            "tps": 240,
+            "contributor": "LucaGEMD",
+            "version": 2.204,
+            "video": "https://www.youtube.com/embed/Bw1Lrh3sSks",
+            "download": true,
+            "desc": false
+        },
+        {
             "id": "deadlocked",
             "name": "Deadlocked",
             "creator": "RobTop",
@@ -1531,6 +1565,23 @@ var fullMacroData = {
             "contributor": "sear, erzor",
             "version": 2.204,
             "video": "https://www.youtube.com/embed/vGiwAgO6mpo",
+            "download": true,
+            "desc": false
+        },
+        {
+            "id": "worlds-hardest-game",
+            "name": "Worlds Hardest Game",
+            "creator": "Infernal331",
+            "levelid": "97683923",
+            "mode": "platformer",
+            "rating": 2,
+            "difficulty": 13,
+            "bot": ["ybot"],
+            "time": 384.433,
+            "tps": 240,
+            "contributor": "noob",
+            "version": 2.204,
+            "video": "https://www.youtube.com/embed/0_Q8RtvUjAo",
             "download": true,
             "desc": false
         }
